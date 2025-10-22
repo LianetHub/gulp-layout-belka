@@ -23,20 +23,6 @@
 @font-face {
   font-family: "Manrope";
   font-display: swap;
-  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Manrope";
-  font-display: swap;
-  src: url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Manrope";
-  font-display: swap;
   src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
@@ -49,10 +35,24 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -78,6 +78,10 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-arrow-top:before {
+  content: "\e917";
 }
 
 .icon-burger-search:before {
@@ -1487,6 +1491,32 @@
   }
 }
 
+.arrow-top {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.arrow-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+@media (any-hover: hover) {
+  .arrow-top:hover {
+    background-color: #e76d00;
+    color: #fff;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .desktop-only {
     display: none;
@@ -2077,6 +2107,19 @@
   background: #e6e6e6;
   border-color: #e6e6e6;
 }
+.btn.btn-grey {
+  background: #f7f7f7;
+  border-color: #f7f7f7;
+  color: #000;
+}
+.btn.btn-grey:hover {
+  background: #eaeaea;
+  border-color: #eaeaea;
+}
+.btn.btn-grey:active {
+  background: #dedede;
+  border-color: #dedede;
+}
 .btn.btn-lg {
   padding: 1.9375rem 3rem;
   font-size: 1.25rem;
@@ -2089,6 +2132,10 @@
 .btn.btn-md {
   font-size: 1.125rem;
   padding: 1.5rem 3rem;
+}
+.btn.btn-sm {
+  padding: 0.9375rem 1.25rem;
+  font-size: 0.875rem;
 }
 .btn.btn-fullwidth {
   width: 100%;
@@ -3447,24 +3494,71 @@ body.is-loaded .preloader {
   padding: 3.125rem;
   border-radius: 2.5rem;
 }
+.footer__body .row {
+  --gutter-x: 7.25rem;
+}
 .footer__info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1.875rem;
+  height: 100%;
 }
 .footer__contacts {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.25rem;
+  gap: 0.5rem;
 }
 .footer__phones {
   display: flex;
   flex-direction: column;
 }
+.footer__phone {
+  font-size: 1.75rem;
+}
 .footer__actions {
   display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.footer__social {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.footer__social:hover {
+  background: #eaeaea;
+}
+.footer__social:active {
+  background: #dedede;
+}
+.footer__copyright {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+.footer__policy {
+  color: #999;
+  font-size: 0.75rem;
+  line-height: 1;
+  transition: color 0.3s ease;
+  text-decoration-line: underline;
+}
+@media (any-hover: hover) {
+  .footer__policy:hover {
+    color: #e76d00;
+    text-decoration: none;
+  }
 }
 .footer__menu {
   border-radius: 1.25rem;
@@ -3480,6 +3574,51 @@ body.is-loaded .preloader {
   line-height: 100%;
   text-transform: uppercase;
 }
+.footer__menu-link {
+  transition: color 0.3s ease;
+}
+@media (any-hover: hover) {
+  .footer__menu-link:hover {
+    color: #e76d00;
+  }
+}
+.footer__services {
+  margin-top: 0.625rem;
+  border-radius: 1.25rem;
+  background: #f7f7f7;
+  padding: 2.5rem 1.875rem 1.875rem 1.875rem;
+}
+.footer__services-caption {
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+.footer__services-blocks {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__services-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer__services-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.footer__services-link {
+  font-size: 0.875rem;
+  text-decoration-line: underline;
+}
+@media (any-hover: hover) {
+  .footer__services-link:hover {
+    text-decoration: none;
+  }
+}
+
 .prod-logo {
   display: flex;
   align-items: center;
@@ -3501,7 +3640,7 @@ body.is-loaded .preloader {
   line-height: 1;
 }
 .prod-logo__name {
-  margin-top: 0.27rem;
+  margin-top: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;

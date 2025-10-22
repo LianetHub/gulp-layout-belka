@@ -188,6 +188,20 @@
 		}
 	}
 
+	&.btn-grey {
+		background: #f7f7f7;
+		border-color: #f7f7f7;
+		color: #000;
+		&:hover {
+			background: darken($color: #f7f7f7, $amount: 5);
+			border-color: darken($color: #f7f7f7, $amount: 5);
+		}
+		&:active {
+			background: darken($color: #f7f7f7, $amount: 10);
+			border-color: darken($color: #f7f7f7, $amount: 10);
+		}
+	}
+
 	&.btn-lg {
 		padding: rem(31) rem(48);
 		font-size: 1.25rem;
@@ -201,6 +215,11 @@
 	&.btn-md {
 		font-size: 1.125rem;
 		padding: rem(24) rem(48);
+	}
+
+	&.btn-sm {
+		padding: 0.9375rem 1.25rem;
+		font-size: 0.875rem;
 	}
 
 	&.btn-fullwidth {

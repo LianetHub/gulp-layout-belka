@@ -240,6 +240,32 @@
 	}
 }
 
+.arrow-top {
+	position: fixed;
+	bottom: 2.5rem;
+	right: 2.5rem;
+	width: 3.125rem;
+	height: 3.125rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	transition: all 0.3s ease;
+	opacity: 0;
+	visibility: hidden;
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $orange;
+			color: #fff;
+		}
+	}
+}
+
 // old
 
 .desktop-only {

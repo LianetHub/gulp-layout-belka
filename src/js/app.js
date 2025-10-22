@@ -802,93 +802,22 @@ $(function () {
         });
     }
 
-    // order form validation
+    var arrowTop = $('.arrow-top');
 
-    // function validateStep($step) {
-    //     let isValid = true;
+    if (arrowTop.length) {
 
-    //     $step.find("[data-required]").each(function () {
-    //         const $field = $(this);
-    //         const value = $field.val().trim();
+        $(window).on('scroll', function () {
+            var scrollPosition = $(window).scrollTop();
+            var viewportHeight = $(window).height();
 
-    //         if (!value) {
-    //             isValid = false;
-    //             return;
-    //         }
+            if (scrollPosition > viewportHeight) {
+                arrowTop.addClass('visible');
+            } else {
+                arrowTop.removeClass('visible');
+            }
+        });
+    }
 
-    //         if ($field.attr("type") === "email") {
-    //             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //             if (!emailPattern.test(value)) {
-    //                 isValid = false;
-    //             }
-    //         }
-
-    //         if ($field.attr("type") === "tel") {
-    //             const phonePattern = /^[0-9\-\+\(\)\s]{5,20}$/;
-    //             if (!phonePattern.test(value)) {
-    //                 isValid = false;
-    //             }
-    //         }
-    //     });
-
-    //     const $radioGroups = $step.find("input[type=radio]").map(function () {
-    //         return $(this).attr("name");
-    //     }).get();
-
-    //     const uniqueGroups = [...new Set($radioGroups)];
-
-    //     uniqueGroups.forEach(function (name) {
-    //         if ($step.find(`input[name="${name}"]`).length) {
-    //             if (!$step.find(`input[name="${name}"]:checked`).length) {
-    //                 isValid = false;
-    //             }
-    //         }
-    //     });
-
-    //     return isValid;
-    // }
-
-    // function checkSteps() {
-    //     let allValid = true;
-
-    //     $(".order__step").each(function (index) {
-    //         const $step = $(this);
-    //         const $next = $(".order__step").eq(index + 1);
-
-    //         if (validateStep($step)) {
-    //             $step.addClass("order__step--done");
-    //             if ($next.length) {
-    //                 $next.removeClass("hidden");
-    //             }
-    //         } else {
-    //             $step.removeClass("order__step--done");
-    //             if ($next.length) {
-    //                 $next.addClass("hidden");
-    //             }
-    //             allValid = false;
-    //         }
-    //     });
-
-    //     const $btn = $(".order__form button[type=submit]");
-    //     const $notifyWarning = $(".order__form-notify--warning");
-    //     const $notifySuccess = $(".order__form-notify--success");
-
-    //     if (allValid) {
-    //         $btn.prop("disabled", false);
-    //         $notifyWarning.addClass("hidden");
-    //         $notifySuccess.removeClass("hidden");
-    //     } else {
-    //         $btn.prop("disabled", true);
-    //         $notifyWarning.removeClass("hidden");
-    //         $notifySuccess.addClass("hidden");
-    //     }
-    // }
-
-    // $(document).on("input change", ".order__step input, .order__step textarea", function () {
-    //     checkSteps();
-    // });
-
-    // checkSteps();
 });
 
 
