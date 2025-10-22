@@ -4,14 +4,13 @@
 }
 
 .fancybox__slide {
-	padding: 0;
-	@media (min-width: $md5) {
-		padding: 1.25rem;
-	}
+	padding: 1.25rem;
 }
 
 .fancybox__backdrop {
-	background: rgba(30, 30, 30, 0.6);
+	background: rgba(94, 167, 0, 0.7);
+	backdrop-filter: blur(rem(10));
+	-webkit-backdrop-filter: blur(rem(10));
 }
 
 .fancybox__content {
@@ -27,13 +26,208 @@
 .popup {
 	display: none;
 	background: #fff;
-	max-width: rem(620);
+	color: #000;
+	max-width: rem(720);
 	width: 100%;
-	color: #242424;
-	padding: 1.5rem 2rem;
-	border-radius: 1.5rem;
-	&:has(.popup__content) {
-		overflow: hidden;
-		padding: 0;
+	border-radius: rem(20);
+	padding: rem(30) rem(20);
+	width: 100%;
+	&--large {
+		max-width: rem(1000);
 	}
+	@media (min-width: $md5) {
+		padding: rem(50);
+		border-radius: 2.1875rem;
+	}
+	// .popup__header
+	&__header {
+		max-width: rem(570);
+		.popup__title {
+			text-align: left;
+		}
+	}
+	// .popup__subtitle
+	&__subtitle {
+		font-size: 0.875rem;
+		font-weight: 300;
+		line-height: 120%;
+		margin-top: rem(20);
+
+		@media (min-width: $md4) {
+			margin-top: rem(30);
+		}
+	}
+	// .popup__title
+	&__title {
+		text-align: center;
+	}
+	&__text {
+		text-align: center;
+		margin-top: rem(20);
+	}
+	// .popup__form
+	&__form {
+		margin-top: rem(30);
+		@media (min-width: $md5) {
+			margin-top: rem(50);
+		}
+		.row {
+			--gutter-y: #{rem(10)};
+		}
+		.checkbox__btn {
+			@media (max-width: $md5) {
+				padding: 0;
+			}
+		}
+	}
+	// .popup__form-bottom
+	&__form-bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(20);
+		margin-top: rem(20);
+		@media (min-width: $md5) {
+			margin-top: rem(30);
+			gap: rem(30);
+		}
+	}
+	// .popup__form-sign
+	&__form-sign {
+		color: #70c700;
+		font-weight: 800;
+		line-height: 100%;
+		text-transform: uppercase;
+		transition: color 0.3s ease;
+		font-size: rem(14);
+		@media (min-width: $md5) {
+			font-size: 1.125rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+				color: $orange;
+			}
+		}
+	}
+	// .popup__success
+	&__success {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: rem(20) rem(10);
+		gap: rem(10);
+		@media (min-width: $md5) {
+			gap: rem(20);
+			padding: rem(50);
+		}
+	}
+	// .popup__success-thumb
+	&__success-thumb {
+		max-width: rem(200);
+		height: rem(200);
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	// .popup__success-subtitle
+	&__success-subtitle {
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+		}
+	}
+	// .popup__tender
+	&__tender {
+		margin-top: rem(30);
+		@media (min-width: $md3) {
+			margin-top: 3.12rem;
+		}
+		.popup__form {
+			margin-top: 0;
+		}
+		& > .row {
+			@media (max-width: $md3) {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+	// .popup__tender-info
+	&__tender-info {
+		border-radius: 1.25rem;
+		background: #f7f7f7;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		gap: rem(20);
+		padding: rem(20);
+		@media (min-width: $md4) {
+			padding: 1.875rem;
+			gap: rem(30);
+		}
+	}
+	// .popup__tender-desc
+	&__tender-desc {
+		font-size: 0.875rem;
+		font-weight: 300;
+		line-height: 120%;
+	}
+	// .popup__tender-body
+	&__tender-body {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		& ol {
+			li {
+				counter-increment: num;
+				display: flex;
+				gap: rem(10);
+				font-size: 0.875rem;
+				font-weight: 300;
+				line-height: 120%;
+				&:not(:last-child) {
+					margin-bottom: 1.25rem;
+				}
+				&::before {
+					content: "0" counter(num);
+					font-size: 1.5rem;
+					font-weight: 700;
+					line-height: 120%;
+					width: 2.1875rem;
+					flex-shrink: 0;
+				}
+			}
+		}
+	}
+}
+
+.fancybox__content > .f-button.is-close-btn {
+	--f-button-width: #{rem(30)};
+	--f-button-height: #{rem(30)};
+	--f-button-border-radius: 50%;
+	--f-button-color: #fff;
+	--f-button-hover-color: #{$red};
+	--f-button-bg: transparent;
+	--f-button-hover-bg: transparent;
+	--f-button-active-bg: transparent;
+	--f-button-svg-width: #{rem(18)};
+	--f-button-svg-height: #{rem(18)};
+	border: rem(1) solid;
+	opacity: 1;
+	top: -20px;
+	right: -20px;
+}
+
+.is-compact .fancybox__content > .f-button.is-close-btn {
+	--f-button-border-radius: 50%;
+	--f-button-color: #fff;
+	--f-button-hover-color: #fff;
+	--f-button-outline-color: #000;
+	--f-button-bg: rgba(0, 0, 0, 0.6);
+	--f-button-active-bg: rgba(0, 0, 0, 0.6);
+	--f-button-hover-bg: rgba(0, 0, 0, 0.6);
+	--f-button-svg-width: 18px;
+	--f-button-svg-height: 18px;
+	--f-button-svg-filter: none;
+	top: 15px;
+	right: 15px;
 }

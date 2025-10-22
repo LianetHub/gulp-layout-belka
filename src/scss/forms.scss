@@ -1,10 +1,14 @@
 .form {
+	// .form__field
+	&__field {
+		position: relative;
+	}
 	// .form__control
 	&__control {
 		text-overflow: ellipsis;
 		transition: border-color 0.3s ease, color 0.3s ease;
 		width: 100%;
-		min-height: rem(60);
+
 		border-radius: rem(100);
 		background: #fff;
 		border: rem(1) solid #eee;
@@ -13,11 +17,31 @@
 		font-size: 1.125rem;
 
 		padding: rem(14) rem(29);
+		@media (min-width: $md5) {
+			min-height: rem(60);
+		}
 
 		&--large {
 			min-height: 5rem;
 			font-size: 1.5rem;
 			padding: 1.5rem 3.13rem;
+		}
+
+		&--medium {
+			height: rem(50);
+			font-size: 0.875rem;
+			padding: rem(15) rem(20);
+			@media (min-width: $md5) {
+				font-size: 1.125rem;
+				padding: rem(20) rem(30);
+				height: rem(70);
+			}
+		}
+
+		&--grey {
+			border-radius: 6.25rem;
+			border: rem(1) solid rgba(0, 0, 0, 0.1);
+			background: #f7f7f7;
 		}
 
 		&::placeholder {
@@ -47,7 +71,58 @@
 		}
 		&:is(textarea) {
 			height: 7.5rem;
+			border-radius: 1.5rem;
 			resize: none;
+		}
+	}
+	// .form__password-visibility-btn
+	&__password-visibility-btn {
+		position: absolute;
+		top: 50%;
+		right: rem(20);
+		transform: translateY(-50%);
+		font-size: rem(22);
+		width: rem(40);
+		height: rem(40);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #999;
+		transition: color 0.3s ease;
+		&.icon-eye {
+			padding-top: rem(4);
+			font-size: rem(17);
+		}
+		@media (min-width: $md5) {
+			right: rem(30);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+	// .form__recovery-password
+	&__recovery-password {
+		color: #e76d00;
+		font-size: 0.875rem;
+		line-height: 100%;
+		border-radius: 6.25rem;
+		display: block;
+		width: fit-content;
+		margin-left: auto;
+		background: #fff;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		padding: rem(10) rem(20);
+		@media (min-width: $md5) {
+			padding: 1.4375rem 1.875rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #e76d00;
+				color: #fff;
+			}
 		}
 	}
 
@@ -58,26 +133,47 @@
 	// .form__file-input
 	&__file-input {
 	}
-	// .form__file-btn
-	&__file-btn {
-		color: #1570ef;
-		font-size: 1.125rem;
-		font-weight: 400;
-		line-height: 122.222%;
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
+	// .form__file-filed
+	&__file-filed {
+		border: 1px dashed rgba(0, 0, 0, 0.1);
+		background: #f7f7f7;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		text-align: center;
+		color: #999;
 		cursor: pointer;
-		&::before {
-			color: #181d27;
-			width: 1.25rem;
-			height: 1.25rem;
-			font-size: 1.25rem;
-			flex-shrink: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+		transition: all 0.3s ease;
+		padding: 1.875rem;
+		border-radius: 1.5625rem;
+		@media (min-width: $md5) {
+			padding: 2.5rem 1.875rem;
+			border-radius: 2.1875rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $orange;
+			}
+		}
+	}
+	// .form__file-caption
+	&__file-caption {
+		line-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(10);
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1.125rem;
+		}
+	}
+	// .form__file-format
+	&__file-format {
+		line-height: 150%;
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
 		}
 	}
 }
@@ -122,6 +218,7 @@
 			background: darken($color: $orangeLight, $amount: 10);
 		}
 	}
+
 	&.btn-green-light {
 		background: $greenLight;
 		color: $green;
@@ -203,8 +300,12 @@
 	}
 
 	&.btn-lg {
-		padding: rem(31) rem(48);
-		font-size: 1.25rem;
+		padding: rem(20) rem(32);
+		font-size: rem(14);
+		@media (min-width: $md5) {
+			padding: rem(31) rem(48);
+			font-size: 1.25rem;
+		}
 		&::before {
 			width: 1.5rem;
 			height: 1.5rem;
@@ -259,8 +360,12 @@
 		align-items: center;
 		gap: 0.62rem;
 		color: #999;
-		font-size: 1.125rem;
 		line-height: 100%;
+		font-size: 0.875rem;
+		user-select: none;
+		@media (min-width: $md5) {
+			font-size: 1.125rem;
+		}
 		cursor: pointer;
 		&::before {
 			content: "";
@@ -269,12 +374,17 @@
 			border: 1px solid rgba(0, 0, 0, 0.1);
 			background: #fff;
 			color: #fff;
-			width: 1.5rem;
-			height: 1.5rem;
-			font-size: 0.75rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			width: 1.25rem;
+			height: 1.25rem;
+			font-size: 0.675rem;
+			@media (min-width: $md5) {
+				font-size: 0.75rem;
+				width: 1.5rem;
+				height: 1.5rem;
+			}
 		}
 	}
 }

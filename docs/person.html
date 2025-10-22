@@ -85,7 +85,7 @@
                             <span></span><span></span>
                         </button>
                         <div class="header__actions">
-                            <a href="" aria-label="Профиль пользователя" class="header__action header__action--user icon-user"></a>
+                            <a href="#auth" data-fancybox aria-label="Профиль пользователя" class="header__action header__action--user icon-user"></a>
                             <a href="/cart.html" aria-label="Корзина" class="header__action header__action--cart icon-cart">
                                 <span class="cart-quantity">99</span>
                             </a>
@@ -104,7 +104,7 @@
                 <div class="footer__container">
                     <div class="footer__body">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-xxl-3 col-4">
                                 <div class="footer__info">
                                     <div class="footer__contacts">
                                         <a href="/" class="footer__logo logo">
@@ -121,7 +121,7 @@
                                             <a href="tel:+74959888495" class="footer__phone phone-link">+7 (977) <span>832-37-67</span></a>
                                         </div>
                                         <div class="footer__actions">
-                                            <a href="" class="btn btn-grey btn-sm">Связаться</a>
+                                            <a href="#callback" data-fancybox class="btn btn-grey btn-sm">Связаться</a>
                                             <div class="footer__socials">
                                                 <a href="" aria-label="Связаться с нами в Telegram" class="footer__social icon-telegram"></a>
                                                 <a href="" aria-label="Связаться с нами в Max" class="footer__social icon-max"></a>
@@ -148,7 +148,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-9">
+                            <div class="col-xxl-9 col-8">
                                 <nav aria-label="Меню в подвале" class="footer__menu">
                                     <ul class="footer__menu-list">
                                         <li class="footer__menu-item"><a href="" class="footer__menu-link">Франшиза</a></li>
@@ -217,24 +217,136 @@
                 </div>
             </footer>
             <a href="#" class="arrow-top icon-arrow-top"></a>
-            <div id="success" class="popup popup--medium">
-                <div class="popup__success">
-                    <div class="popup__success-icon">
-                        <img src="img/tick-circle.svg" alt="Иконка">
+            <div id="auth" class="popup">
+                <h2 class="popup__title title">Авторизация</h2>
+                <form action="#" class="popup__form form">
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" name="login" data-required class="form__control form__control--medium form__control--grey" placeholder="Логин">
+                        </div>
+                        <div class="col-12">
+                            <div class="form__field">
+                                <input type="password" data-required name="password" class="form__control form__control--medium form__control--grey" placeholder="Пароль">
+                                <button type="button" class="form__password-visibility-btn icon-eye-off"></button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="checkbox">
+                                <input type="checkbox" name="remember" checked class="checkbox__input hidden" hidden>
+                                <span class="checkbox__btn">
+                                    Запомнить меня
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="" class="form__recovery-password">Восстановить пароль</a>
+                        </div>
                     </div>
-                    <div class="popup__success-title">Готово!</div>
-                    <p class="popup__success-subtitle">Вы успешно отправили заявку. Наши специалисты скоро свяжутся с вами и ответят на все вопросы.</p>
-                    <button type="button" data-fancybox-close class="popup__success-btn btn btn-primary">ок, закрыть</button>
+                    <div class="popup__form-bottom">
+                        <button type="submit" class="btn btn-secondary btn-lg btn-fullwidth">отправить</button>
+                        <a href="" class="popup__form-sign">Зарегистрироваться</a>
+                    </div>
+                </form>
+            </div>
+            <div id="callback" class="popup">
+                <h2 class="popup__title title">Оставить заявку</h2>
+                <p class="popup__text subtitle">Оставьте заявку сейчас и&nbsp;получите скидку 10%</p>
+                <form action="#" class="popup__form form">
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" name="name" data-required class="form__control form__control--medium form__control--grey" placeholder="Ваше имя*">
+                        </div>
+                        <div class="col-12">
+                            <input type="tel" name="phone" data-required class="form__control form__control--medium form__control--grey" placeholder="+7 (...) ...- ... - ...*">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" data-required class="form__control form__control--medium form__control--grey" placeholder="Опишите вашу проблему*"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label class="checkbox">
+                                <input type="checkbox" name="agree-processing" data-required class="checkbox__input hidden" hidden>
+                                <span class="checkbox__btn">
+                                    Согласен на обработку <a href="#" class="link">персональных данных</a>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="popup__form-bottom">
+                        <button type="submit" class="btn btn-secondary btn-lg btn-fullwidth">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+            <div id="success" class="popup">
+                <div class="popup__success">
+                    <div class="popup__success-thumb">
+                        <img src="img/thumb.jpg" class="cover-image" alt="Аватар">
+                    </div>
+                    <div class="popup__title title">Спасибо!</div>
+                    <p class="popup__success-subtitle">Ваша заявка успешно отправлена, наши менеджеры скоро свяжутся с вами.</p>
                 </div>
             </div>
-            <div id="order-success" class="popup popup--medium">
-                <div class="popup__success">
-
-                    <div class="popup__success-title">Готово!</div>
-                    <p class="popup__success-subtitle">
-                        Заказ <a href="">№ 0012374 </a>успешно оплачен. Менеджер свяжется с вами в ближайшее время для подтверждения заказа. Вы можете отслеживать статусы заказа в своём <a href="">личном кабинете</a>.
-                    </p>
-                    <button type="button" data-fancybox-close class="popup__success-btn btn btn-primary">ок, закрыть</button>
+            <div id="tender" class="popup popup--large">
+                <div class="popup__header">
+                    <h4 class="popup__title title">
+                        <span class="color-accent">Пригласить «Наша Белка»</span> для участия в тендере
+                    </h4>
+                    <p class="popup__subtitle">Компания «Наша Белка» имеет опыт участия в закупках и зарегистрирована на всех крупных тендерных площадках. Для того чтобы пригласить нас на тендер, пожалуйста, заполните форму ниже. Мы открыты новым предложениям!</p>
+                </div>
+                <div class="popup__tender">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <form action="#" class="popup__form form">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="text" name="" data-required class="form__control form__control--medium form__control--grey" placeholder="Контактное лицо*">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="tel" name="phone" data-required class="form__control form__control--medium form__control--grey" placeholder="+7 (...) ... - ... - ...*">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" name="email" data-required class="form__control form__control--medium form__control--grey" placeholder="Электронная почта">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form__file">
+                                            <input type="file" name="file" class="form__file-input hidden" hidden accept=".png,.tiff,.tif,.jpg,.jpeg,.doc,.docx,.zip,.rar">
+                                            <span class="form__file-filed">
+                                                <span class="form__file-caption icon-clip">Прикрепить заявку</span>
+                                                <span class="form__file-format">
+                                                    Поддерживаемые форматы: <br>
+                                                    PNG, TIFF, JPG, DOC, DOCX, ZIP, RAR
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="agreement" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__btn">
+                                                Даю согласие на обработку данных
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="popup__form-bottom">
+                                    <button type="submit" class="btn btn-secondary btn-lg btn-fullwidth">отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="popup__tender-info">
+                                <p class="popup__tender-desc">Любой партнёр либо организация может удобно и надёжно осуществить закупку клининговых услуг из нашего каталога в соответствии с Фед. законом ч. 3 ст. 83.1 44-ФЗ.</p>
+                                <div class="popup__tender-body">
+                                    <p><strong>Для этого:</strong></p>
+                                    <ol>
+                                        <li>Позвоните нам по телефону: +7 (977) 832-37-67 либо отправьте заявку ниже</li>
+                                        <li>Наш специалист составит коммерческое предложение, его наличие и стоимость.</li>
+                                        <li>Оперативно подготовим оферту и проект контракта, сообщим номер на портале поставщиков</li>
+                                        <li>Подписываем проект контракта и поставляем услуги, согласно вашему запросу</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- plugins -->

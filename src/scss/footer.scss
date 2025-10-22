@@ -9,7 +9,9 @@
 		padding: 3.125rem;
 		border-radius: 2.5rem;
 		.row {
-			--gutter-x: #{rem(116)};
+			@media (min-width: $md0) {
+				--gutter-x: #{rem(116)};
+			}
 		}
 	}
 	// .footer__info

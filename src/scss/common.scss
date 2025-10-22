@@ -425,13 +425,16 @@ body {
 	}
 	// .feedback__body
 	&__body {
-		width: 46%;
 		margin-left: auto;
 		padding: 3.125rem;
 		border-radius: 2.1875rem;
 		background: rgba(255, 255, 255, 0.9);
 		backdrop-filter: blur(rem(10));
 		-webkit-backdrop-filter: blur(rem(10));
+		width: 50%;
+		@media (min-width: $md0) {
+			width: 46%;
+		}
 	}
 	// .feedback__title
 	&__title {

@@ -29,9 +29,7 @@ $(function () {
     if (typeof Fancybox !== "undefined" && Fancybox !== null) {
         Fancybox.bind("[data-fancybox]", {
             dragToClose: false,
-            closeButton: false,
             closeClick: "outside",
-
         });
     }
 
@@ -55,6 +53,20 @@ $(function () {
                 $target.find('span').text('В корзине')
             } else {
                 $target.find('span').text('В корзину')
+            }
+        }
+
+        // toggler visibility paswor
+        if ($target.is('.form__password-visibility-btn')) {
+            const $btn = $target;
+            const $input = $btn.siblings('input[type="password"], input[type="text"]');
+
+            if ($input.attr('type') === 'password') {
+                $input.attr('type', 'text');
+                $btn.removeClass('icon-eye-off').addClass('icon-eye');
+            } else {
+                $input.attr('type', 'password');
+                $btn.removeClass('icon-eye').addClass('icon-eye-off');
             }
         }
 
@@ -817,6 +829,8 @@ $(function () {
             }
         });
     }
+
+
 
 });
 

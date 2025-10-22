@@ -7,6 +7,7 @@
 	align-items: center;
 	flex-shrink: 0;
 	gap: rem(10);
+	width: rem(264);
 	// .logo__image
 	&__image {
 		width: 4.5625rem;
@@ -35,10 +36,14 @@
 }
 
 .title {
-	font-size: 2.375rem;
 	font-weight: 600;
 	line-height: 110%;
-	letter-spacing: -0.095rem;
+	font-size: 1.5rem;
+	letter-spacing: -0.045rem;
+	@media (min-width: $md5) {
+		letter-spacing: -0.095rem;
+		font-size: 2.375rem;
+	}
 }
 
 .title-xl {
