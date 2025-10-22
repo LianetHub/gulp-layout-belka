@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Главная страница'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo">
+                    <div class="promo__container">
+                        <div class="promo__banner swiper">
+                            <div class="swiper-wrapper">
+                                <div class="promo__slide swiper-slide" style="background-image: url('@img/promo-slider/01.jpg');">
+                                    <h1 class="promo__title title-xl">Подарите себе время уборкой займёмся мы</h1>
+                                    <a href="" class="promo__btn btn btn-primary-outline btn-lg icon-plus-circle">Оставить заявку</a>
+                                    <p class="promo__sale">Оставьте заявку сейчас и&nbsp;получите скидку 10%</p>
+                                </div>
+                                <div class="promo__slide swiper-slide" style="background-image: url('@img/promo-slider/02.jpg');">
+                                    <div class="promo__title title-xl">Идеальная чистота от пола до потолка с Генеральной уборкой</div>
+                                    <a href="" class="promo__btn btn btn-primary-outline btn-lg icon-plus-circle">Узнать подробнее</a>
+                                    <p class="promo__sale">Уборка в любое удобное для&nbsp;вас время</p>
+                                </div>
+                                <div class="promo__slide swiper-slide" style="background-image: url('@img/promo-slider/03.jpg');">
+                                    <div class="promo__title title-xl">Глубокая химчистка мебели: свежесть и чистота без разводов</div>
+                                    <a href="" class="promo__btn btn btn-primary-outline btn-lg icon-plus-circle">Заказать химчистку</a>
+                                    <p class="promo__sale">Продлите жизнь любимому дивану! Гарантия результата</p>
+                                </div>
+                            </div>
+                            <div class="promo__controls">
+                                <button type="button" class="promo__prev swiper-button-prev swiper-button-static"></button>
+                                <div class="promo__pagination swiper-pagination"></div>
+                                <button type="button" class="promo__next swiper-button-next swiper-button-static"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <form action="#" class="main-form">
+                    <div class="main-form__container">
+                        <div class="main-form__body">
+                            <div class="row">
+                                <div class="col-xxl-2 col-lg-4 col-md-6">
+                                    <div class="select">
+                                        <select data-required name="object_type">
+                                            <option value="" disabled selected>Объект</option>
+                                            <option value="flat">Квартира</option>
+                                            <option value="cottage">Коттедж / Дом</option>
+                                            <option value="office">Офис / Помещение</option>
+                                            <option value="other">Другое</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-lg-4 col-md-6">
+                                    <div class="select">
+                                        <select data-required name="service_type">
+                                            <option value="" disabled selected>Уборка</option>
+                                            <option value="general">Генеральная уборка</option>
+                                            <option value="regular">Регулярная (еженедельная)</option>
+                                            <option value="express">Поддерживающая / Экспресс</option>
+                                            <option value="after_repair">После ремонта / строительства</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-lg-4 col-md-6">
+                                    <div class="select">
+                                        <select data-required name="area_range">
+                                            <option value="" disabled selected>Площадь, м2</option>
+                                            <option value="0-50">До 50 м²</option>
+                                            <option value="51-80">51 — 80 м²</option>
+                                            <option value="81-120">81 — 120 м²</option>
+                                            <option value="121-150">121 — 150 м²</option>
+                                            <option value="150+">Более 150 м²</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-lg-4 col-md-6">
+                                    <input type="text" data-required name="name" class="form__control" placeholder="Ваше имя">
+                                </div>
+                                <div class="col-xxl-2 col-lg-4 col-md-6">
+                                    <input type="tel" data-required name="phone" class="form__control" placeholder="+7 (...) ...- ... - ...">
+                                </div>
+                                <div class="col-xxl-2 col-lg-4 col-md-6">
+                                    <button type="submit" class="btn btn-secondary btn-fullwidth">Заказать уборку</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <section class="services">
+                    <div class="services__container">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="services__main">
+                                    <h2 class="services__title title">
+                                        <span class="color-accent">Помогаем инвестировать время</span> в развитие бизнеса, а не в его уборку
+                                    </h2>
+                                    <p class="services__subtitle subtitle">
+                                        Где наводим порядок: производства, склады, офисы, торговые центры, школы, детские сады, спортивные клубы, рестораны, отели, госучреждения
+                                    </p>
+                                </div>
+                            </div>
+                            @@loop('./html/templates/_service.html', './html/json/_home-services.json')
+                        </div>
+                        <a href="" class="services__more more-btn btn btn-white btn-md icon-next">Все услуги</a>
+                    </div>
+                </section>
+                @@include('./html/_calc.html')
+                <section class="products">
+                    <div class="products__container">
+                        <h2 class="products__title title">Интернет-<span class="color-accent">магазин</span></h2>
+                        <div class="products__categories nav-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="nav-slider__item swiper-slide">
+                                    <a href="" class="products__category label active">Все товары</a>
+                                </div>
+                                <div class="nav-slider__item swiper-slide">
+                                    <a href="" class="products__category label">Для стёкол</a>
+                                </div>
+                                <div class="nav-slider__item swiper-slide">
+                                    <a href="" class="products__category label">Для полов</a>
+                                </div>
+                                <div class="nav-slider__item swiper-slide">
+                                    <a href="" class="products__category label">Для сантехники</a>
+                                </div>
+                                <div class="nav-slider__item swiper-slide">
+                                    <a href="" class="products__category label">Для кухни</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__slider swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_product.html', './html/json/_productsSlider.json')
+                                </div>
+                            </div>
+                            <button type="button" class="products__prev swiper-button-prev"></button>
+                            <button type="button" class="products__next swiper-button-next"></button>
+                        </div>
+                        <a href="" class="products__more more-btn btn btn-white btn-md icon-next">Все товары</a>
+                    </div>
+                </section>
+                <section class="faq">
+                    <div class="faq__container">
+                        <h2 class="faq__title title">
+                            Вопросы <span class="color-accent">и ответы</span>
+                        </h2>
+                        <div class="faq__body">
+                            <div class="row">
+                                @@loop('./html/templates/_faq-item.html', './html/json/_home-faq.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('./html/_feedback.html')
+                <section class="clients">
+                    <div class="clients__container">
+                        <h2 class="clients__title title">Нам <span class="color-accent">доверяют</span></h2>
+                        <div class="clients__lines">
+                            <div class="clients__line">
+                                @@loop('./html/templates/_client-logo.html', './html/json/_home-clients-lines-1.json')
+                            </div>
+                            <div class="clients__line">
+                                @@loop('./html/templates/_client-logo.html', './html/json/_home-clients-lines-2.json')
+                            </div>
+                            <div class="clients__line">
+                                @@loop('./html/templates/_client-logo.html', './html/json/_home-clients-lines-3.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('./html/_blog.html')
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

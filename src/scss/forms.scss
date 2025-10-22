@@ -1,0 +1,341 @@
+.form {
+	// .form__control
+	&__control {
+		text-overflow: ellipsis;
+		transition: border-color 0.3s ease, color 0.3s ease;
+		width: 100%;
+		min-height: rem(60);
+		border-radius: rem(100);
+		background: #fff;
+		border: rem(1) solid #eee;
+		color: #d5d7da;
+		color: #000;
+		font-size: 1.125rem;
+
+		padding: rem(14) rem(29);
+
+		&--large {
+			min-height: 5rem;
+			font-size: 1.5rem;
+			padding: 1.5rem 3.13rem;
+		}
+
+		&::placeholder {
+			opacity: 1;
+			color: #999;
+		}
+		&:hover,
+		&:focus {
+			border-color: $orange;
+		}
+		&._error {
+			border: rem(1) solid $red;
+			&::placeholder {
+				color: $red;
+			}
+		}
+
+		&:disabled {
+			background: #ddd;
+			border-color: #ddd;
+		}
+		&._error {
+			border-bottom: rem(1) solid $red;
+			& + .form__field-placeholder {
+				color: $red;
+			}
+		}
+		&:is(textarea) {
+			height: 7.5rem;
+			resize: none;
+		}
+	}
+
+	// .form__file
+	&__file {
+		width: 100%;
+	}
+	// .form__file-input
+	&__file-input {
+	}
+	// .form__file-btn
+	&__file-btn {
+		color: #1570ef;
+		font-size: 1.125rem;
+		font-weight: 400;
+		line-height: 122.222%;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+		&::before {
+			color: #181d27;
+			width: 1.25rem;
+			height: 1.25rem;
+			font-size: 1.25rem;
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+		}
+	}
+}
+
+.btn {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	user-select: none;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	width: fit-content;
+	padding: rem(14) rem(24);
+	font-size: 1.125rem;
+	font-weight: 800;
+	line-height: 1;
+	border-radius: 6.25rem;
+	gap: rem(10);
+	border: 1px solid;
+	&::before {
+		width: 1.125rem;
+		height: 1.125rem;
+		flex-shrink: 0;
+	}
+
+	&:focus-visible {
+		box-shadow: 0 0 rem(1) rem(1) $black;
+	}
+
+	&.btn-orange-light {
+		background: $orangeLight;
+		color: $orange;
+		border-color: rgba($color: $orange, $alpha: 0.2);
+
+		&:hover {
+			background: darken($color: $orangeLight, $amount: 5);
+		}
+		&:active {
+			background: darken($color: $orangeLight, $amount: 10);
+		}
+	}
+	&.btn-green-light {
+		background: $greenLight;
+		color: $green;
+		border-color: rgba($color: $green, $alpha: 0.2);
+
+		&:hover {
+			background: darken($color: $greenLight, $amount: 5);
+		}
+		&:active {
+			background: darken($color: $greenLight, $amount: 10);
+		}
+	}
+
+	&.btn-primary {
+		border-color: $orange;
+		color: #fff;
+		background: $orange;
+		&:hover {
+			background: darken($color: $orange, $amount: 5);
+			border-color: darken($color: $orange, $amount: 5);
+		}
+		&:active {
+			background: darken($color: $orange, $amount: 10);
+			border-color: darken($color: $orange, $amount: 10);
+		}
+	}
+
+	&.btn-primary-outline {
+		border-color: #fff;
+		background: $orange;
+		&:hover {
+			background: darken($color: $orange, $amount: 5);
+		}
+		&:active {
+			background: darken($color: $orange, $amount: 10);
+		}
+	}
+
+	&.btn-secondary {
+		border-color: $green;
+		color: #fff;
+		background: $green;
+		&:hover {
+			background: darken($color: $green, $amount: 5);
+			border-color: darken($color: $green, $amount: 5);
+		}
+		&:active {
+			background: darken($color: $green, $amount: 10);
+			border-color: darken($color: $green, $amount: 10);
+		}
+	}
+
+	&.btn-white {
+		background: #fff;
+		border-color: #fff;
+		color: #000;
+		&:hover {
+			background: darken($color: #fff, $amount: 5);
+			border-color: darken($color: #fff, $amount: 5);
+		}
+		&:active {
+			background: darken($color: #fff, $amount: 10);
+			border-color: darken($color: #fff, $amount: 10);
+		}
+	}
+
+	&.btn-lg {
+		padding: rem(31) rem(48);
+		font-size: 1.25rem;
+		&::before {
+			width: 1.5rem;
+			height: 1.5rem;
+			font-size: 1.5rem;
+		}
+	}
+
+	&.btn-md {
+		font-size: 1.125rem;
+		padding: rem(24) rem(48);
+	}
+
+	&.btn-fullwidth {
+		width: 100%;
+	}
+
+	&:disabled,
+	&[aria-disabled="true"] {
+		cursor: default;
+		opacity: 0.7;
+		pointer-events: none;
+	}
+}
+
+.checkbox {
+	display: block;
+	// .checkbox__input
+	&__input {
+		&:checked {
+			& + .checkbox__btn {
+				color: #000;
+				&::before {
+					background: $orange;
+					@extend %ic, .icon-check;
+				}
+			}
+		}
+	}
+	// .checkbox__btn
+	&__btn {
+		border-radius: 6.25rem;
+		border: rem(1) solid #fff;
+		background: #fff;
+		width: 100%;
+		padding: 1.12rem 1.88rem;
+		display: flex;
+		align-items: center;
+		gap: 0.62rem;
+		color: #999;
+		font-size: 1.125rem;
+		line-height: 100%;
+		cursor: pointer;
+		&::before {
+			content: "";
+			flex-shrink: 0;
+			border-radius: 0.3125rem;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			background: #fff;
+			color: #fff;
+			width: 1.5rem;
+			height: 1.5rem;
+			font-size: 0.75rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+@import "./modules/select";
+
+.switcher {
+	// .switcher__input
+	&__input {
+		&:checked {
+			& + .switcher__btn {
+				&::before {
+					left: rem(22);
+				}
+				background: $pink;
+			}
+		}
+	}
+	// .switcher__btn
+	&__btn {
+		position: relative;
+		width: rem(44);
+		height: rem(24);
+		border-radius: 0.75rem;
+		background: #f2f4f7;
+		display: block;
+		cursor: pointer;
+		transition: background-color 0.3s ease 0s;
+		&::before {
+			content: "";
+			position: absolute;
+			top: rem(2);
+			left: rem(2);
+			width: rem(20);
+			transition: left 0.3s ease 0s;
+			border-radius: 50%;
+			background: #fff;
+			filter: drop-shadow(0 rem(1) rem(2) rgba(16, 24, 40, 0.06)) drop-shadow(0 rem(1) rem(3) rgba(16, 24, 40, 0.1));
+			height: calc(100% - rem(4));
+		}
+	}
+}
+
+.option {
+	// .option__input
+	&__input {
+		&:checked {
+			& + .option__btn {
+				font-weight: 800;
+				background: #000;
+				color: #fff;
+			}
+		}
+	}
+	// .option__btn
+	&__btn {
+		@extend .label;
+	}
+}
+
+// .iti__selected-flag {
+// 	background-color: rgba(0, 0, 0, 0.05);
+// }
+
+// .select {
+// 	position: relative;
+// 	& select {
+// 		appearance: none;
+// 		background: transparent;
+// 		border: rem(1) solid $yellow;
+// 		border-radius: rem(6);
+// 		color: $white;
+// 		font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+// 			"Segoe UI Symbol", "Noto Color Emoji";
+// 		display: block;
+// 		font-size: 1rem;
+// 		font-weight: 500;
+// 		height: 100%;
+// 		outline: none;
+// 		padding: 1em em(37) 1em em(23);
+// 		width: 100%;
+// 	}
+// }

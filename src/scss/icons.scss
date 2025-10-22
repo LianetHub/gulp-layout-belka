@@ -1,0 +1,89 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	speak: never;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+.icon-burger-search:before {
+	content: "\e900";
+}
+.icon-cart:before {
+	content: "\e901";
+}
+.icon-check:before {
+	content: "\e902";
+}
+.icon-chevron-down:before {
+	content: "\e903";
+}
+.icon-clip:before {
+	content: "\e904";
+}
+.icon-close-circle:before {
+	content: "\e905";
+}
+.icon-credit-card:before {
+	content: "\e906";
+}
+.icon-eye:before {
+	content: "\e907";
+}
+.icon-eye-off:before {
+	content: "\e908";
+}
+.icon-info:before {
+	content: "\e909";
+}
+.icon-max:before {
+	content: "\e90a";
+}
+.icon-minus:before {
+	content: "\e90b";
+}
+.icon-next:before {
+	content: "\e90c";
+}
+.icon-online-money:before {
+	content: "\e90d";
+}
+.icon-photo:before {
+	content: "\e90e";
+}
+.icon-plus:before {
+	content: "\e90f";
+}
+.icon-plus-add:before {
+	content: "\e910";
+}
+.icon-plus-circle:before {
+	content: "\e911";
+}
+.icon-prev:before {
+	content: "\e912";
+}
+.icon-rubble:before {
+	content: "\e913";
+}
+.icon-telegram:before {
+	content: "\e914";
+}
+.icon-user:before {
+	content: "\e915";
+}
+.icon-whatsapp:before {
+	content: "\e916";
+}

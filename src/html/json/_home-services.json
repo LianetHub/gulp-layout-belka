@@ -1,0 +1,22 @@
+[
+    {
+        "className": "col-6",
+        "image": "@img/services/01.jpg",
+        "name": "Уборка помещений"
+    },
+    {
+        "className": "col-4",
+        "image": "@img/services/02.jpg",
+        "name": "Уборка офисов"
+    },
+    {
+        "className": "col-4",
+        "image": "@img/services/03.jpg",
+        "name": "Уборка отелей"
+    },
+    {
+        "className": "col-4",
+        "image": "@img/services/04.jpg",
+        "name": "Мойка окон"
+    }
+]

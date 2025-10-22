@@ -1,0 +1,39 @@
+.fancybox__container {
+	max-width: 100% !important;
+	padding: 0 !important;
+}
+
+.fancybox__slide {
+	padding: 0;
+	@media (min-width: $md5) {
+		padding: 1.25rem;
+	}
+}
+
+.fancybox__backdrop {
+	background: rgba(30, 30, 30, 0.6);
+}
+
+.fancybox__content {
+	color: inherit;
+	background: none;
+	padding: 0;
+}
+
+.fancybox__content :focus:not(.carousel__button.is-close) {
+	outline: none;
+}
+
+.popup {
+	display: none;
+	background: #fff;
+	max-width: rem(620);
+	width: 100%;
+	color: #242424;
+	padding: 1.5rem 2rem;
+	border-radius: 1.5rem;
+	&:has(.popup__content) {
+		overflow: hidden;
+		padding: 0;
+	}
+}

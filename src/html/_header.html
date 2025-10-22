@@ -1,0 +1,46 @@
+<header class="header">
+    <div class="header__container">
+        @@include("./templates/_logo.html", {
+        "className": "header__logo"
+        })
+        <div class="header__main">
+            <div class="header__btns">
+                <div class="header__catalog">
+                    <button type="button" class="header__catalog-btn btn btn-orange-light icon-burger-search">
+                        Услуги
+                        <span class="icon-chevron-down"></span>
+                    </button>
+                </div>
+                <a href="#tender" data-fancybox class="header__tender btn btn-green-light icon-plus-add">
+                    В тендер
+                </a>
+            </div>
+            <nav aria-label="Навигация" class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">Магазин</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">Франшиза</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" aria-label="Открыть главное меню" class="header__menu-toggler icon-menu">
+                <span></span><span></span>
+            </button>
+            <div class="header__actions">
+                <a href="" aria-label="Профиль пользователя" class="header__action header__action--user icon-user"></a>
+                <a href="/cart.html" aria-label="Корзина" class="header__action header__action--cart icon-cart">
+                    <span class="cart-quantity">99</span>
+                </a>
+            </div>
+        </div>
+        <div class="header__contacts">
+            <a href="tel:+79778323767" class="header__phone phone-link">+7 (977) <span>832-37-67</span></a>
+            <div class="header__worktime">с 8:00 до 20:00</div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,17 @@
+<section class="blog">
+    <div class="blog__container">
+        <h2 class="blog__title title">
+            Новости
+        </h2>
+        <div class="blog__content">
+            <div class="blog__slider swiper">
+                <div class="swiper-wrapper">
+                    @@loop('./templates/_blog-item.html', './html/json/_home-blog.json')
+                </div>
+            </div>
+            <button class="blog__prev swiper-button-prev"></button>
+            <button class="blog__next swiper-button-next"></button>
+        </div>
+        <a href="" class="blog__more more-btn btn btn-white btn-md icon-next">Все новости</a>
+    </div>
+</section>

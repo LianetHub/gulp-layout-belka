@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?9j7gqx');
+  src:  url('fonts/icons.eot?9j7gqx#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?9j7gqx') format('truetype'),
+    url('fonts/icons.woff?9j7gqx') format('woff'),
+    url('fonts/icons.svg?9j7gqx#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-top:before {
+  content: "\e917";
+}
+.icon-burger-search:before {
+  content: "\e900";
+}
+.icon-cart:before {
+  content: "\e901";
+}
+.icon-check:before {
+  content: "\e902";
+}
+.icon-chevron-down:before {
+  content: "\e903";
+}
+.icon-clip:before {
+  content: "\e904";
+}
+.icon-close-circle:before {
+  content: "\e905";
+}
+.icon-credit-card:before {
+  content: "\e906";
+}
+.icon-eye:before {
+  content: "\e907";
+}
+.icon-eye-off:before {
+  content: "\e908";
+}
+.icon-info:before {
+  content: "\e909";
+}
+.icon-max:before {
+  content: "\e90a";
+}
+.icon-minus:before {
+  content: "\e90b";
+}
+.icon-next:before {
+  content: "\e90c";
+}
+.icon-online-money:before {
+  content: "\e90d";
+}
+.icon-photo:before {
+  content: "\e90e";
+}
+.icon-plus:before {
+  content: "\e90f";
+}
+.icon-plus-add:before {
+  content: "\e910";
+}
+.icon-plus-circle:before {
+  content: "\e911";
+}
+.icon-prev:before {
+  content: "\e912";
+}
+.icon-rubble:before {
+  content: "\e913";
+}
+.icon-telegram:before {
+  content: "\e914";
+}
+.icon-user:before {
+  content: "\e915";
+}
+.icon-whatsapp:before {
+  content: "\e916";
+}

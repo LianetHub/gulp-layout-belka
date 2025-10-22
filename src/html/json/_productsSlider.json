@@ -1,0 +1,86 @@
+[
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/01.jpg",
+        "name": "Средство для стекол",
+        "desc": "Мойка и протирка окон, зеркал без разводов",
+        "price": "1 350 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/02.jpg",
+        "name": "Универсальный очиститель",
+        "desc": "Для большинства поверхностей: кухня, санузел, мебель",
+        "price": "1 450 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/03.jpg",
+        "name": "Концентрат для пола",
+        "desc": "Мытье полов из laminate, плитки, линолеума",
+        "price": "800 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/04.jpg",
+        "name": "Гель для сантехники",
+        "desc": "Очистка раковин, ванн, унитазов от налета и ржавчины",
+        "price": "1 800 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/05.jpg",
+        "name": "Спрей для кухни",
+        "desc": "Удаление жира с плит, вытяжек, рабочих поверхностей",
+        "price": "750 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/06.jpg",
+        "name": "Обезжириватель",
+        "desc": "Сильные загрязнения в гаражах, мастерских, на кухне",
+        "price": "1 250 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/01.jpg",
+        "name": "Средство для стекол",
+        "desc": "Мойка и протирка окон, зеркал без разводов",
+        "price": "1 350 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/02.jpg",
+        "name": "Универсальный очиститель",
+        "desc": "Для большинства поверхностей: кухня, санузел, мебель",
+        "price": "1 450 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/03.jpg",
+        "name": "Концентрат для пола",
+        "desc": "Мытье полов из laminate, плитки, линолеума",
+        "price": "800 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/04.jpg",
+        "name": "Гель для сантехники",
+        "desc": "Очистка раковин, ванн, унитазов от налета и ржавчины",
+        "price": "1 800 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/05.jpg",
+        "name": "Спрей для кухни",
+        "desc": "Удаление жира с плит, вытяжек, рабочих поверхностей",
+        "price": "750 ₽"
+    },
+    {
+        "className": "products__slide swiper-slide",
+        "image": "@img/goods/06.jpg",
+        "name": "Обезжириватель",
+        "desc": "Сильные загрязнения в гаражах, мастерских, на кухне",
+        "price": "1 250 ₽"
+    }
+]
