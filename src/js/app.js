@@ -74,15 +74,22 @@ $(function () {
         if ($target.closest(".header__services-btn").length) {
             $(".header__services-btn").toggleClass('active');
             $('.header__services-content').toggleClass('visible');
+            $('body').toggleClass('lock-services');
         } else if (!$target.closest(".header__services-content").length || $target.is('.header__services-close')) {
             $(".header__services-btn").removeClass('active');
             $('.header__services-content').removeClass('visible');
+            $('body').removeClass('lock-services');
         }
 
         // menu toggler
         if ($target.closest('.header__menu-toggler').length) {
             $('.header__menu-toggler').toggleClass('active');
-            $('.menu').toggleClass("menu-open")
+            $('.menu').toggleClass("menu-open");
+            $('body').toggleClass('lock-menu');
+        } else if (!$target.closest('.menu__body').length) {
+            $('.header__menu-toggler').removeClass('active');
+            $('.menu').removeClass("menu-open");
+            $('body').removeClass('lock-menu');
         }
 
     });

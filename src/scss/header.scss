@@ -76,20 +76,35 @@
 	}
 	// .header__services-content
 	&__services-content {
-		position: absolute;
-		top: 100%;
+		position: fixed;
+		top: 0;
 		left: 0;
+		bottom: 0;
 		right: 0;
-		z-index: 6;
-		padding: 1.875rem;
-		border-radius: 2.1875rem;
+		overflow-y: auto;
+		overflow-x: visible;
+		z-index: 12;
+		padding: 4.38rem 1.25rem 1.25rem;
 		background: rgba(231, 109, 0, 0.5);
 		backdrop-filter: blur(rem(20));
 		-webkit-backdrop-filter: blur(rem(20));
 		opacity: 0;
 		visibility: hidden;
-		transform: translateY(-1rem);
 		transition: all 0.15s ease-in;
+		transform: translateX(100%);
+		@media (min-width: $md5) {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			bottom: auto;
+			transform: translateY(-1rem);
+			overflow-y: visible;
+			overflow-x: visible;
+			z-index: 6;
+			border-radius: 2.1875rem;
+			padding: 1.875rem;
+		}
 		&.visible {
 			opacity: 1;
 			visibility: visible;
@@ -99,8 +114,19 @@
 	// .header__services-blocks
 	&__services-blocks {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
 		gap: rem(5);
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md3) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (min-width: $md2) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media (min-width: $md1) {
+			grid-template-columns: repeat(5, 1fr);
+		}
 	}
 	// .header__services-block
 	&__services-block {
@@ -284,12 +310,22 @@
 		backdrop-filter: blur(rem(20));
 		-webkit-backdrop-filter: blur(rem(20));
 		z-index: 6;
-		padding: rem(30);
+
 		border-radius: 1.875rem;
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(-1rem);
 		transition: all 0.15s ease-in;
+	}
+	@media (max-width: $md5) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+		transform: translateX(100%);
 	}
 	&.menu-open {
 		opacity: 1;
@@ -313,10 +349,13 @@
 		font-weight: 800;
 		text-decoration: underline;
 		text-transform: uppercase;
-		padding: 3.125rem;
 		border-radius: 1.25rem;
 		background: #f7f7f7;
 		height: 100%;
+		padding: 1.875rem;
+		@media (min-width: $md5) {
+			padding: 3.125rem;
+		}
 		@media (min-width: $md1) {
 			gap: 1.5rem;
 			align-items: center;
@@ -357,6 +396,10 @@
 	}
 	// .menu__body
 	&__body {
+		padding: 4.69rem 1.25rem 1.25rem;
+		@media (min-width: $md5) {
+			padding: rem(30);
+		}
 		@media (min-width: $md1) {
 			position: absolute;
 			top: 100%;
@@ -420,19 +463,31 @@
 	}
 	// .menu__banner-footer
 	&__banner-footer {
-		margin-top: 1.25rem;
 		display: flex;
-		align-items: center;
 		gap: 1.25rem;
+		flex-direction: column;
+		margin-top: rem(15);
+		@media (min-width: $md5) {
+			margin-top: 1.25rem;
+			align-items: center;
+			flex-direction: row;
+		}
 	}
 	// .menu__banner-text
 	&__banner-text {
-		font-size: 0.875rem;
 		font-weight: 700;
 		line-height: 120%;
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+		}
 	}
 	// .menu__banner-btn
 	&__banner-btn {
+		width: 100%;
+		@media (min-width: $md5) {
+			width: fit-content;
+		}
 		&.btn-white {
 			color: #70c700;
 		}
