@@ -14,17 +14,22 @@
 		border: rem(1) solid #eee;
 		color: #d5d7da;
 		color: #000;
-		font-size: 1.125rem;
+		min-height: rem(50);
+		font-size: 0.875rem;
+		padding: rem(14) rem(20);
 
-		padding: rem(14) rem(29);
 		@media (min-width: $md5) {
+			padding: rem(14) rem(29);
+			font-size: 1.125rem;
 			min-height: rem(60);
 		}
 
 		&--large {
-			min-height: 5rem;
-			font-size: 1.5rem;
-			padding: 1.5rem 3.13rem;
+			@media (min-width: $md5) {
+				min-height: 5rem;
+				padding: 1.5rem 3.13rem;
+				font-size: 1.5rem;
+			}
 		}
 
 		&--medium {
@@ -300,9 +305,9 @@
 	}
 
 	&.btn-lg {
-		padding: rem(20) rem(32);
+		padding: rem(15) rem(32);
 		font-size: rem(14);
-		@media (min-width: $md5) {
+		@media (min-width: $md3) {
 			padding: rem(31) rem(48);
 			font-size: 1.25rem;
 		}
@@ -314,8 +319,12 @@
 	}
 
 	&.btn-md {
-		font-size: 1.125rem;
-		padding: rem(24) rem(48);
+		padding: rem(15) rem(32);
+		font-size: rem(14);
+		@media (min-width: $md3) {
+			padding: rem(24) rem(48);
+			font-size: 1.125rem;
+		}
 	}
 
 	&.btn-sm {
@@ -355,7 +364,6 @@
 		border: rem(1) solid #fff;
 		background: #fff;
 		width: 100%;
-		padding: 1.12rem 1.88rem;
 		display: flex;
 		align-items: center;
 		gap: 0.62rem;
@@ -363,7 +371,9 @@
 		line-height: 100%;
 		font-size: 0.875rem;
 		user-select: none;
+		padding: rem(15) rem(20);
 		@media (min-width: $md5) {
+			padding: 1.12rem 1.88rem;
 			font-size: 1.125rem;
 		}
 		cursor: pointer;

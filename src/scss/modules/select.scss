@@ -31,13 +31,12 @@
 		position: relative;
 		cursor: pointer;
 		transition: all 0.3s ease 0s;
-		min-height: rem(60);
+
 		width: 100%;
 		border-radius: rem(100);
 		border: rem(1) solid #eee;
 		background: #fff;
-		padding: 1rem rem(20) 1rem rem(29);
-		font-size: 1.125rem;
+
 		line-height: 100%;
 		gap: rem(7);
 		display: flex;
@@ -45,8 +44,15 @@
 		justify-content: space-between;
 		z-index: 1;
 		user-select: none;
-
 		color: #999;
+		font-size: 0.875rem;
+		min-height: rem(50);
+		padding: 1rem rem(20) 1rem rem(20);
+		@media (min-width: $md5) {
+			padding: 1rem rem(20) 1rem rem(29);
+			min-height: rem(60);
+			font-size: 1.125rem;
+		}
 		&.selected {
 			color: #000;
 		}

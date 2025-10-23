@@ -1,26 +1,34 @@
 .promo {
+	padding: rem(10) 0 rem(15);
+	@media (min-width: $md5) {
+		padding: 0;
+	}
 	// .promo__container
 	&__container {
 	}
 	// .promo__banner
 	&__banner {
-		border-radius: 2.5rem;
 		position: relative;
+		border-radius: 1.875rem;
+		@media (min-width: $md3) {
+			border-radius: 2.5rem;
+		}
 	}
 	// .promo__slide
 	&__slide {
-		height: 43.75rem;
-		padding: 4.375rem;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: 75% center;
 		position: relative;
 		color: #fff;
 		z-index: 1;
-		border-radius: 2.5rem;
+		border-radius: 1.875rem;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		justify-content: space-between;
+		padding: 1.25rem 1.25rem 2.81rem;
+		height: 25rem;
 		&::before {
 			content: "";
 			position: absolute;
@@ -28,8 +36,27 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(270deg, rgba(105, 50, 14, 0) 40.31%, rgba(105, 50, 14, 0.5) 80.19%);
 			z-index: -1;
+			border-radius: 1.875rem;
+			background: linear-gradient(180deg, rgba(105, 50, 14, 0.8) 25%, rgba(105, 50, 14, 0) 50%, rgba(105, 50, 14, 0.8) 75%);
+			@media (min-width: $md3) {
+				background: linear-gradient(270deg, rgba(105, 50, 14, 0) 40.31%, rgba(105, 50, 14, 0.5) 80.19%);
+			}
+		}
+		@media (min-width: $md5) {
+			justify-content: stretch;
+			height: 30.75rem;
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+		@media (min-width: $md3) {
+			height: 35.75rem;
+			border-radius: 2.5rem;
+			padding: 3.75rem;
+		}
+		@media (min-width: $md2) {
+			padding: 4.375rem;
+			height: 43.75rem;
 		}
 	}
 	// .promo__title
@@ -38,26 +65,48 @@
 	}
 	// .promo__btn
 	&__btn {
-		margin-top: 3.12rem;
+		margin-top: 2rem;
+		width: 100%;
+		@media (min-width: $md5) {
+			width: auto;
+		}
+		@media (min-width: $md2) {
+			margin-top: 3.12rem;
+		}
 	}
 	// .promo__sale
 	&__sale {
-		margin-top: 1.25rem;
 		text-align: center;
-		font-size: 1.125rem;
 		line-height: 120%;
 		letter-spacing: -0.03375rem;
 		max-width: 20.4rem;
-		padding-inline: 2.125rem;
 		position: relative;
+		font-size: 0.75rem;
+		padding-inline: 4rem;
+		margin-top: rem(15);
+		@media (min-width: $md5) {
+			margin-top: 1.25rem;
+			padding-inline: 2.125rem;
+			font-size: 1rem;
+		}
+		@media (min-width: $md3) {
+			font-size: 1.125rem;
+		}
 		&::before {
 			content: "";
 			position: absolute;
-			top: rem(-35);
-			left: rem(-14);
 			width: rem(48);
 			height: rem(55);
 			background: url("@img/arrow.svg") center / contain no-repeat;
+			top: rem(-18);
+			left: rem(4);
+			pointer-events: none;
+			transform: rotate(-25deg);
+			@media (min-width: $md5) {
+				top: rem(-35);
+				left: rem(-14);
+				transform: none;
+			}
 		}
 	}
 	// .promo__controls
@@ -65,26 +114,48 @@
 		position: absolute;
 		bottom: 1.25rem;
 		right: 1.25rem;
+		left: 1.25rem;
 		display: flex;
 		align-items: center;
 		gap: rem(20);
+		@media (min-width: $md5) {
+			left: auto;
+		}
 	}
 	// .promo__prev
 	&__prev {
+		@media (max-width: $md5) {
+			display: none;
+		}
 	}
 	// .promo__pagination
 	&__pagination {
 	}
 	// .promo__next
 	&__next {
+		@media (max-width: $md5) {
+			display: none;
+		}
 	}
 }
 
 .main-form {
-	padding: rem(40) 0 rem(50);
+	padding: rem(15) 0;
+	@media (min-width: $md5) {
+		padding: rem(30) 0;
+	}
+	@media (min-width: $md3) {
+		padding: rem(40) 0 rem(50);
+	}
+	.row {
+		--gutter-y: #{rem(5)};
+	}
 	.btn {
-		min-height: 100%;
 		font-size: 0.875rem;
+		min-height: rem(50);
+		@media (min-width: $md5) {
+			min-height: 100%;
+		}
 	}
 	.select {
 		min-height: 100%;
@@ -95,8 +166,15 @@
 	// .main-form__body
 	&__body {
 		background: #fff;
-		border-radius: 6.25rem;
-		padding: 0.625rem;
+		padding: 1.25rem;
+		border-radius: 1.875rem;
+		@media (min-width: $md5) {
+			border-radius: 2rem;
+			padding: 0.625rem;
+		}
+		@media (min-width: $md1) {
+			border-radius: 6.25rem;
+		}
 	}
 	// .main-form__container
 	&__container {
@@ -104,7 +182,13 @@
 }
 
 .faq {
-	padding: rem(50) 0;
+	padding: rem(15) 0;
+	@media (min-width: $md5) {
+		padding: rem(30) 0;
+	}
+	@media (min-width: $md3) {
+		padding: rem(50) 0;
+	}
 	// .faq__container
 	&__container {
 	}
@@ -115,17 +199,25 @@
 	&__body {
 		margin-top: rem(20);
 		.row {
-			--gutter-x: #{rem(10)};
-			--gutter-y: #{rem(10)};
+			--gutter-x: #{rem(5)};
+			--gutter-y: #{rem(5)};
+			@media (min-width: $md5) {
+				--gutter-x: #{rem(10)};
+				--gutter-y: #{rem(10)};
+			}
 		}
 	}
 	// .faq__item
 	&__item {
 		background: #fff;
-		border-radius: 6.25rem;
-		padding: 1.25rem 1.25rem 1.25rem 1.875rem;
 		cursor: pointer;
 		transition: all 0.3s ease;
+		padding: rem(10) rem(10) rem(10) 1.25rem;
+		border-radius: 1.5625rem;
+		@media (min-width: $md5) {
+			border-radius: 6.25rem;
+			padding: 1.25rem 1.25rem 1.25rem 1.875rem;
+		}
 		&.active {
 			border-radius: rem(12);
 			.faq__item-title {
@@ -137,13 +229,19 @@
 	}
 	// .faq__item-title
 	&__item-title {
-		font-size: 1.125rem;
 		line-height: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 0.63rem;
 		min-height: 100%;
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
+		@media (min-width: $md3) {
+			font-size: 1.125rem;
+		}
 
 		&::before {
 			order: 1;
@@ -157,11 +255,24 @@
 	&__item-answer {
 		margin-top: 0.5rem;
 		display: none;
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+		}
+		@media (min-width: $md3) {
+			font-size: 1rem;
+		}
 	}
 }
 
 .clients {
-	padding: rem(50) 0;
+	padding: rem(15) 0;
+	@media (min-width: $md5) {
+		padding: rem(30) 0;
+	}
+	@media (min-width: $md3) {
+		padding: rem(50) 0;
+	}
 	// .clients__container
 	&__container {
 	}
@@ -170,18 +281,33 @@
 	}
 	// .clients__lines
 	&__lines {
-		margin-top: 2.5rem;
-		display: flex;
-		flex-direction: column;
-		gap: 2.5rem;
+		display: none;
+		@media (min-width: $md5) {
+			display: grid;
+			grid-auto-rows: 1fr;
+			margin-top: 1.5rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (min-width: $md3) {
+			margin-top: 2.5rem;
+			display: flex;
+			flex-direction: column;
+			gap: 2.5rem;
+		}
 	}
 	// .clients__line
 	&__line {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		&:not(:last-child) {
-			padding-bottom: 2.5rem;
-			border-bottom: rem(1) solid rgba(0, 0, 0, 0.05);
+		display: contents;
+		@media (min-width: $md3) {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			&:not(:last-child) {
+				padding-bottom: 2.5rem;
+				border-bottom: rem(1) solid rgba(0, 0, 0, 0.05);
+			}
 		}
 	}
 	// .clients__logo
@@ -189,42 +315,83 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 2.5rem;
 		position: relative;
-		&:first-child {
-			padding-left: 0;
-			justify-content: flex-start;
+		padding: 1rem 2.5rem;
+		@media (min-width: $md3) {
+			padding: 0 2.5rem;
+			&:first-child {
+				padding-left: 0;
+				justify-content: flex-start;
+			}
+			&:last-child {
+				padding-right: 0;
+				justify-content: flex-end;
+			}
+			&:not(:last-child) {
+				border-right: rem(1) solid rgba(0, 0, 0, 0.05);
+			}
 		}
-		&:last-child {
-			padding-right: 0;
-			justify-content: flex-end;
-		}
-		&:not(:last-child) {
-			border-right: rem(1) solid rgba(0, 0, 0, 0.05);
+	}
+	// .clients__slider
+	&__slider {
+		margin-top: rem(20);
+	}
+	// .clients__slide
+	&__slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: rem(103);
+	}
+	// .clients__pagination
+	&__pagination {
+		--swiper-pagination-bullet-color: #999;
+		&.swiper-pagination {
+			margin-top: 0.875rem;
 		}
 	}
 }
 
 .calc {
-	padding: rem(50) 0;
+	padding: rem(15) 0;
+	@media (min-width: $md5) {
+		padding: rem(30) 0;
+	}
+	@media (min-width: $md3) {
+		padding: rem(50) 0;
+	}
 	// .calc__container
 	&__container {
 	}
 	// .calc__body
 	&__body {
 		background: #fff;
-		padding: 1.25rem;
-		border-radius: 2.5rem;
 		overflow: hidden;
+		border-radius: rem(30);
+		padding: rem(20) rem(10) rem(10);
+		@media (min-width: $md4) {
+			padding: 1.25rem;
+			border-radius: 2.5rem;
+		}
 	}
 	// .calc__title
 	&__title {
-		text-align: center;
-		padding: 1.25rem 0;
+		padding: rem(10);
+		max-width: 17rem;
+		@media (min-width: $md4) {
+			max-width: 100%;
+			text-align: center;
+			padding: 1.25rem 0;
+		}
 	}
 	// .calc__types
 	&__types {
-		margin-top: 0.5rem;
+		margin-top: 0.65rem;
+		padding: 0 rem(10);
+		@media (min-width: $md4) {
+			padding: 0;
+			margin-top: 0.5rem;
+		}
 	}
 	// .calc__label
 	&__label {
@@ -236,13 +403,25 @@
 	}
 	// .calc__block
 	&__block {
-		border-radius: 2.1875rem;
 		background: #f7f7f7;
-		padding: 3.125rem;
 		display: none;
+		padding: rem(10);
+		border-radius: rem(20);
+
+		@media (min-width: $md3) {
+			border-radius: 2.1875rem;
+			padding: rem(30);
+		}
+		@media (min-width: $md1) {
+			padding: 3.125rem;
+		}
 		.row {
-			--gutter-x: #{rem(10)};
-			--gutter-y: #{rem(10)};
+			--gutter-x: #{rem(5)};
+			--gutter-y: #{rem(5)};
+			@media (min-width: $md5) {
+				--gutter-x: #{rem(10)};
+				--gutter-y: #{rem(10)};
+			}
 		}
 		&.active {
 			display: block;
@@ -251,59 +430,93 @@
 	// .calc__result
 	&__result {
 		height: 100%;
-		min-height: rem(440);
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		gap: rem(10);
-		border-radius: rem(35);
-		padding: rem(50);
 		background: url("@img/calc.jpg") center 45% / cover no-repeat;
+		border-radius: rem(20);
+		padding: rem(10);
+		min-height: rem(350);
+		@media (min-width: $md5) {
+			min-height: rem(440);
+		}
+		@media (min-width: $md3) {
+			padding: rem(30);
+			border-radius: rem(35);
+		}
+		@media (min-width: $md1) {
+			padding: rem(50);
+		}
 	}
 	// .calc__result-total
 	&__result-total {
-		padding: 1.25rem 3.125rem;
-		border-radius: 6.25rem;
 		background: rgba(112, 199, 0, 0.5);
 		color: #fff;
 		backdrop-filter: blur(rem(25));
 		-webkit-backdrop-filter: blur(rem(25));
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		padding: 1rem 1.25rem 0.6rem;
+		border-radius: 1.25rem;
+		gap: rem(7);
+		@media (min-width: $md5) {
+			border-radius: 6.25rem;
+			padding: 1.25rem 3.125rem;
+			text-align: left;
+			justify-content: space-between;
+			flex-direction: row;
+			gap: 0;
+		}
 	}
 	// .calc__result-caption
 	&__result-caption {
-		font-size: 1.125rem;
 		font-weight: 800;
 		line-height: 110%;
-		letter-spacing: -0.045rem;
+		font-size: 0.875rem;
+		letter-spacing: -0.035rem;
+		@media (min-width: $md5) {
+			letter-spacing: -0.045rem;
+			font-size: 1.125rem;
+		}
 	}
+	// .calc__result-service
 	&__result-service {
-		display: block;
+		@media (min-width: $md5) {
+			display: block;
+		}
 		&::after {
 			content: ":";
 		}
 	}
 	// .calc__result-coast
 	&__result-coast {
-		font-size: 1.5rem;
 		font-weight: 600;
-		line-height: 110%;
-		letter-spacing: -0.06rem;
 	}
 	// .calc__result-value
 	&__result-value {
 		text-align: center;
-		font-size: 3.375rem;
 		font-weight: 800;
 		line-height: 110%;
-		letter-spacing: -0.3375rem;
+		font-size: 2.125rem;
+		letter-spacing: -0.2125rem;
+		@media (min-width: $md5) {
+			font-size: 3.375rem;
+			letter-spacing: -0.3375rem;
+		}
 		&::after {
 			content: " ₽";
 		}
 	}
 	// .calc__result-btn
 	&__result-btn {
+		&.btn {
+			@media (max-width: $md5) {
+				font-size: rem(18);
+				min-height: rem(70);
+			}
+		}
 	}
 }

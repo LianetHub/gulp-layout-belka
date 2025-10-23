@@ -70,6 +70,21 @@ $(function () {
             }
         }
 
+        // toggler catalog
+        if ($target.closest(".header__services-btn").length) {
+            $(".header__services-btn").toggleClass('active');
+            $('.header__services-content').toggleClass('visible');
+        } else if (!$target.closest(".header__services-content").length || $target.is('.header__services-close')) {
+            $(".header__services-btn").removeClass('active');
+            $('.header__services-content').removeClass('visible');
+        }
+
+        // menu toggler
+        if ($target.closest('.header__menu-toggler').length) {
+            $('.header__menu-toggler').toggleClass('active');
+            $('.menu').toggleClass("menu-open")
+        }
+
     });
 
 
@@ -268,21 +283,40 @@ $(function () {
     if ($('.products__slider').length) {
         new Swiper('.products__slider', {
             slidesPerView: "auto",
-            spaceBetween: 20,
+            spaceBetween: 10,
             navigation: {
                 prevEl: '.products__prev',
                 nextEl: '.products__next'
+            },
+            breakpoints: {
+                767.98: {
+                    spaceBetween: 20,
+                }
             }
         });
     }
 
     if ($('.blog__slider').length) {
         new Swiper('.blog__slider', {
-            slidesPerView: 4,
-            spaceBetween: 20,
+            slidesPerView: "auto",
+            spaceBetween: 10,
             navigation: {
                 prevEl: '.blog__prev',
                 nextEl: '.blog__next'
+            },
+            breakpoints: {
+                575.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                991.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1199.98: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                }
             }
         });
     }
@@ -301,12 +335,27 @@ $(function () {
 
             new Swiper($currentSlider[0], {
                 slidesPerView: "auto",
-                spaceBetween: 10,
-                initialSlide: initialIndex
+                spaceBetween: 5,
+                initialSlide: initialIndex,
+                breakpoints: {
+                    991.98: {
+                        spaceBetween: 10,
+                    }
+                }
             });
         });
     }
 
+    if ($('.clients__slider').length) {
+        new Swiper('.clients__slider', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.clients__pagination',
+                clickable: true
+            }
+        });
+    }
 
 
     // Phone Russia Mask
