@@ -7,7 +7,17 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
+                @@include('./html/_heading.html', {
+                "breadcrumbs": ["Наша белка", "Услуги"],
+                "title": "Генеральная уборка",
+                "titleMarker": '<span class="color-accent">Генеральная</span> уборка'
+                })
+                @@include('./html/_articles.html')
                 @@include('./html/_feedback.html')
+                @@include('./html/_products.html', {
+                "title": 'Интернет-<span class="color-accent">магазин</span>',
+                })
+                @@include('./html/_banners.html')
                 @@include('./html/_blog.html')
             </main>
             @@include('html/_footer.html', {})

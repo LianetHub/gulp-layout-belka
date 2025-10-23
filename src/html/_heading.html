@@ -1,0 +1,18 @@
+<div class="heading">
+    <div class="heading__container">
+        @@if (typeof breadcrumbs !== 'undefined') {
+        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                @@for (var i = 0; i < breadcrumbs.length; i++) { <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link">`+breadcrumbs[i]+`</a>
+                    </li>
+                    }
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__link active">@@title</span>
+                    </li>
+            </ul>
+        </nav>
+        }
+        <h1 class="heading__title title-xl">@@titleMarker</h1>
+    </div>
+</div>

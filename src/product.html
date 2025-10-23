@@ -7,7 +7,17 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
+                @@include('./html/_heading.html', {
+                "breadcrumbs": ["Наша белка", "Каталог товаров", "Пылесосы для сухой уборки"],
+                "title": "Пылесос для сухой уборки AVQ 380-2",
+                "titleMarker": 'Пылесос для сухой уборки <span class="color-accent">AVQ 380-2</span>'
+                })
+                @@include('./html/_products.html', {
+                "title": 'Похожие <span class="color-accent">товары</span>',
+                })
+                @@include('./html/_articles.html')
                 @@include('./html/_feedback.html')
+                @@include('./html/_banners.html')
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

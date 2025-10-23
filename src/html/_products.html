@@ -1,0 +1,34 @@
+<section class="products">
+    <div class="products__container">
+        <h2 class="products__title title">@@title</h2>
+        <div class="products__categories nav-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="nav-slider__item swiper-slide">
+                    <a href="" class="products__category label active">Все товары</a>
+                </div>
+                <div class="nav-slider__item swiper-slide">
+                    <a href="" class="products__category label">Для стёкол</a>
+                </div>
+                <div class="nav-slider__item swiper-slide">
+                    <a href="" class="products__category label">Для полов</a>
+                </div>
+                <div class="nav-slider__item swiper-slide">
+                    <a href="" class="products__category label">Для сантехники</a>
+                </div>
+                <div class="nav-slider__item swiper-slide">
+                    <a href="" class="products__category label">Для кухни</a>
+                </div>
+            </div>
+        </div>
+        <div class="products__content">
+            <div class="products__slider swiper">
+                <div class="swiper-wrapper">
+                    @@loop('./templates/_product.html', './html/json/_productsSlider.json')
+                </div>
+            </div>
+            <button type="button" class="products__prev swiper-button-prev"></button>
+            <button type="button" class="products__next swiper-button-next"></button>
+        </div>
+        <a href="/catalog.html" class="products__more more-btn btn btn-white btn-md icon-next">Все товары</a>
+    </div>
+</section>

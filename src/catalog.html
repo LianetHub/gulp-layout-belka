@@ -7,7 +7,14 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
+                @@include('./html/_heading.html', {
+                "breadcrumbs": ["Наша белка"],
+                "title": "Каталог клининговых товаров",
+                "titleMarker": '<span class="color-accent">Каталог</span> клининговых товаров'
+                })
+                @@include('./html/_articles.html')
                 @@include('./html/_feedback.html')
+                @@include('./html/_banners.html')
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

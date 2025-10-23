@@ -7,7 +7,13 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
-
+                @@include('./html/_heading.html', {
+                "titleMarker": 'Корзина <span class="color-grey">14</span>'
+                })
+                @@include('./html/_products.html', {
+                "title": 'Похожие <span class="color-accent">товары</span>',
+                })
+                @@include('./html/_banners.html')
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

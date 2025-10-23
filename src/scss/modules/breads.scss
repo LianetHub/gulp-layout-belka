@@ -1,18 +1,18 @@
 .breadcrumbs {
 	position: relative;
 	z-index: 3;
-	margin-top: 0.75rem;
-
+	padding: 1.25rem 0;
 	@media (min-width: $md5) {
-		margin-top: 1.12rem;
+		padding: 2rem 0;
+	}
+	@media (min-width: $md2) {
+		padding: 2.5rem 0;
 	}
 
 	&__list {
 		display: flex;
-		flex-wrap: nowrap;
-		overflow: hidden;
-		white-space: nowrap;
-		gap: 0.5rem;
+		flex-wrap: wrap;
+		gap: rem(10);
 	}
 
 	&__item {
@@ -21,26 +21,15 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		min-width: 0;
-		line-height: 120%;
 		font-size: 0.875rem;
-
-		@media (min-width: $md5) {
-			font-size: 1rem;
-		}
-
-		@media (min-width: $md3) {
-			font-size: 1.125rem;
-		}
+		line-height: 100%;
 
 		&:not(:last-child) {
 			flex-shrink: 1;
 			&::after {
 				content: "/";
-				opacity: 0.5;
-				margin-left: 0.25rem;
-				@media (min-width: $md5) {
-					margin-left: 0.5rem;
-				}
+				color: #cccccc;
+				margin-left: rem(10);
 			}
 		}
 
@@ -55,18 +44,18 @@
 		word-break: break-all;
 		overflow: hidden;
 		text-overflow: ellipsis;
-
+		color: #e76d00;
 		&:is(a) {
 			transition: color 0.3s ease;
 			@media (any-hover: hover) {
 				&:hover {
-					color: $pink;
+					color: #000;
 				}
 			}
 		}
 
 		&.active {
-			opacity: 0.5;
+			color: #000;
 		}
 	}
 }
