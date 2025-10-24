@@ -92,6 +92,20 @@ $(function () {
             $('body').removeClass('lock-menu');
         }
 
+        // product info tabs
+        if ($target.closest('.product-card__tab').length) {
+            const $tab = $target.closest('.product-card__tab');
+            const $tabsWrapper = $tab.closest('.swiper-wrapper');
+            const tabIndex = $tabsWrapper.find('.product-card__tab').index($tab);
+            const $infoBlock = $tab.closest('.product-card__info').find('.product-card__info-content').children().eq(tabIndex);
+
+            $tabsWrapper.find('.product-card__tab').removeClass('active');
+            $tab.addClass('active');
+
+            $tab.closest('.product-card__info').find('.product-card__info-block').removeClass('active');
+            $infoBlock.addClass('active');
+        }
+
     });
 
 
