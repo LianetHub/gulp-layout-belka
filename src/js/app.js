@@ -770,39 +770,31 @@ $(function () {
                 const $input = $(input);
                 const $units = $input.siblings(".range__unit");
                 if ($units.length === 0) return;
+
                 const cs = window.getComputedStyle(input);
                 const value = $input.val();
                 const textWidth = getTextWidth(value, input);
+
                 const paddingLeft = parseFloat(cs.paddingLeft) || 0;
                 const paddingRight = parseFloat(cs.paddingRight) || 0;
                 const clientWidth = input.clientWidth;
-                const contentWidth = Math.max(0, clientWidth - paddingLeft - paddingRight);
-                let textStartX;
-                const ta = cs.textAlign;
-                if (ta === "center") {
-                    textStartX = paddingLeft + Math.max(0, (contentWidth - textWidth) / 2);
-                } else if (ta === "right" || ta === "end") {
-                    textStartX = clientWidth - paddingRight - textWidth;
-                } else {
-                    textStartX = paddingLeft;
-                }
                 const gap = 4;
+
+                const textStartX = paddingLeft;
+
                 const $currency = $units.last();
                 const currencyWidth = $currency.outerWidth();
                 const desiredCurrencyLeft = textStartX + textWidth + gap;
                 const maxCurrencyLeft = clientWidth - paddingRight - currencyWidth;
                 const currencyLeft = Math.min(desiredCurrencyLeft, maxCurrencyLeft);
                 $currency.css("left", currencyLeft + "px");
+
                 const $label = $units.first();
                 const labelWidth = $label.outerWidth();
-                let desiredLabelLeft = textStartX - labelWidth - gap;
-                const minLabelLeft = paddingLeft;
-                let labelLeft = Math.max(minLabelLeft, desiredLabelLeft);
-                const labelRight = labelLeft + labelWidth;
-                if (labelRight + gap > currencyLeft) {
-                    labelLeft = Math.max(minLabelLeft, currencyLeft - labelWidth - gap);
-                }
+
+                const labelLeft = Math.max(0, paddingLeft - labelWidth - gap);
                 $label.css("left", labelLeft + "px");
+
                 $units.addClass("ready");
             }
 

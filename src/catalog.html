@@ -12,6 +12,135 @@
                 "title": "Каталог клининговых товаров",
                 "titleMarker": '<span class="color-accent">Каталог</span> клининговых товаров'
                 })
+                <div class="catalog">
+                    <div class="catalog__container">
+                        <div class="row">
+                            <div class="col-xxl-3 col-lg-4">
+                                <aside class="catalog__filter">
+                                    <div class="catalog__filter-block">
+                                        <div class="catalog__filter-caption">Категории</div>
+                                        <div class="catalog__filter-content">
+                                            <div class="catalog__filter-items">
+                                                <a href="" class="catalog__filter-item">Моющие пылесосы <span class="color-grey">(1)</span></a>
+                                                <a href="" class="catalog__filter-item">Пылесосы для сухой уборки <span class="color-grey">(3)</span></a>
+                                                <a href="" class="catalog__filter-item">Полировальные машины <span class="color-grey">(1)</span></a>
+                                                <a href="" class="catalog__filter-item">Веники, метлы, совки <span class="color-grey">(0)</span></a>
+                                                <a href="" class="catalog__filter-item">Губки и тряпочки для мытья <span class="color-grey">(0)</span></a>
+                                                <a href="" class="catalog__filter-item">Мусорные ведра <span class="color-grey">(0)</span></a>
+                                                <a href="" class="catalog__filter-item">Контейнеры для мусора <span class="color-grey">(0)</span></a>
+                                                <a href="" class="catalog__filter-item">Щетки для уборки <span class="color-grey">(0)</span></a>
+                                                <a href="" class="catalog__filter-item">Средства для уборки шерсти <span class="color-grey">(0)</span></a>
+                                                <a href="" class="catalog__filter-item">Перчатки хозяйственные резиновые <span class="color-grey">(0)</span></a>
+                                                <a href="" class="catalog__filter-item">Тазы хозяйственные <span class="color-grey">(0)</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#catalog-filter" data-fancybox class="catalog__filter-btn btn btn-fullwidth btn-secondary icon-filter">Фильтры</a>
+                                    <form action="#" id="catalog-filter" class="catalog__filter-block filter">
+                                        <div class="filter__blocks">
+                                            <div class="filter__block">
+                                                <div class="filter__block-caption">Бренд</div>
+                                                <div class="filter__block-body">
+                                                    <label class="checkbox checkbox--grey checkbox--small">
+                                                        <input type="checkbox" name="brand" value="Komo" class="checkbox__input hidden" hidden>
+                                                        <span class="checkbox__btn">
+                                                            Komo (1)
+                                                        </span>
+                                                    </label>
+                                                    <label class="checkbox checkbox--grey checkbox--small">
+                                                        <input type="checkbox" name="brand" value="Altus" class="checkbox__input hidden" hidden>
+                                                        <span class="checkbox__btn">
+                                                            Altus (1)
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="filter__block">
+                                                <div class="filter__block-caption">Страна</div>
+                                                <div class="filter__block-body">
+                                                    <label class="checkbox checkbox--grey checkbox--small">
+                                                        <input type="checkbox" name="country" value="china" class="checkbox__input hidden" hidden>
+                                                        <span class="checkbox__btn">
+                                                            Китай (1)
+                                                        </span>
+                                                    </label>
+                                                    <label class="checkbox checkbox--grey checkbox--small">
+                                                        <input type="checkbox" name="country" value="denmark" class="checkbox__input hidden" hidden>
+                                                        <span class="checkbox__btn">
+                                                            Дания (1)
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="filter__block">
+                                                <div class="filter__block-caption">Тип товара</div>
+                                                <div class="filter__block-body">
+                                                    <label class="checkbox checkbox--grey checkbox--small">
+                                                        <input type="checkbox" name="type" value="sponges" class="checkbox__input hidden" hidden>
+                                                        <span class="checkbox__btn">
+                                                            Губки (1)
+                                                        </span>
+                                                    </label>
+                                                    <label class="checkbox checkbox--grey checkbox--small">
+                                                        <input type="checkbox" name="type" value="rags" class="checkbox__input hidden" hidden>
+                                                        <span class="checkbox__btn">
+                                                            Тряпки (1)
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="filter__block">
+                                                <div class="filter__block-caption">Цена</div>
+                                                <div class="filter__range range">
+                                                    <div class="range__slider"></div>
+                                                    <div class="range__column">
+                                                        <span class="range__unit">от</span>
+                                                        <input type="text" name="price-start" min="0" value="19" maxlength="5" class="form__control range__control--start">
+                                                        <span class="range__unit">₽</span>
+                                                    </div>
+                                                    <div class="range__column">
+                                                        <span class="range__unit">до</span>
+                                                        <input type="text" name="price-end" min="0" value="6781" max="10000" maxlength="5" class="form__control range__control--end">
+                                                        <span class="range__unit">₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__bottom">
+                                            <button type="submit" class="filter__compare btn btn-secondary btn-fullwidth">Применить фильтры</button>
+                                            <button type="reset" class="filter__reset">Сбросить</button>
+                                        </div>
+                                    </form>
+                                </aside>
+                            </div>
+                            <div class="col-xxl-9 col-lg-8">
+                                <div class="catalog__header">
+                                    <div class="select">
+                                        <select name="sort_by">
+                                            <option value="" disabled selected>Сортировать по</option>
+                                            <option value="popularity">Популярности</option>
+                                            <option value="rating_desc">Рейтингу (от высокого к низкому)</option>
+                                            <option value="price_asc">Цене (по возрастанию)</option>
+                                            <option value="price_desc">Цене (по убыванию)</option>
+                                            <option value="date_desc">Дате добавления (сначала новые)</option>
+                                            <option value="date_asc">Дате добавления (сначала старые)</option>
+                                            <option value="alpha_asc">Алфавиту (А-Я)</option>
+                                            <option value="alpha_desc">Алфавиту (Я-А)</option>
+                                            <option value="discount_desc">Скидке (от большей к меньшей)</option>
+                                            <option value="reviews_count_desc">Количеству отзывов</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="catalog__body">
+                                    <div class="row">
+                                        @@loop('./html/templates/_product.html', './html/json/_products-catalog.json')
+                                    </div>
+                                </div>
+                                <button type="button" class="catalog__more more-btn btn btn-white btn-md icon-next">показать ещё</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 @@include('./html/_articles.html')
                 @@include('./html/_feedback.html')
                 @@include('./html/_banners.html')

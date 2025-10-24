@@ -38,7 +38,7 @@
 		background: #fff;
 
 		line-height: 100%;
-		gap: rem(7);
+		gap: rem(10);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -49,7 +49,7 @@
 		min-height: rem(50);
 		padding: 1rem rem(20) 1rem rem(20);
 		@media (min-width: $md5) {
-			padding: 1rem rem(20) 1rem rem(29);
+			padding: 1rem rem(20) 1rem;
 			min-height: rem(60);
 			font-size: 1.125rem;
 		}
@@ -89,7 +89,7 @@
 
 	&__body {
 		position: absolute;
-		right: 0;
+		left: 0;
 		top: calc(100% + 0.25rem);
 		width: 100%;
 		min-width: fit-content;

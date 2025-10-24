@@ -585,12 +585,15 @@ body {
 }
 
 .banners {
-	padding: rem(15) 0;
+	padding: rem(35) 0;
 	@media (min-width: $md5) {
 		padding: rem(30) 0;
 	}
 	@media (min-width: $md3) {
 		padding: rem(50) 0;
+	}
+	.row {
+		--gutter-y: 0.25rem;
 	}
 	// .banners__container
 	&__container {
@@ -598,15 +601,22 @@ body {
 }
 
 .banner {
+	height: 100%;
 	border-radius: 2.1875rem;
 	border: rem(2) dashed #fff;
 	background: #70c700;
 	backdrop-filter: blur(rem(10));
 	-webkit-backdrop-filter: blur(rem(10));
-	padding: 1.25rem 3.12rem;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	flex-direction: column;
+	padding: rem(30);
+	gap: 1.25rem;
+	@media (min-width: $md4) {
+		padding: 1.25rem 3.12rem;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+	}
 	&--orange {
 		background: #e76d00;
 	}
@@ -615,27 +625,39 @@ body {
 	}
 	// .banner__title
 	&__title {
-		max-width: 18.875rem;
+		max-width: rem(195);
+		@media (min-width: $md4) {
+			max-width: 18.875rem;
+		}
 		& span {
 			color: #fff;
 		}
 	}
 	// .banner__subtitle
 	&__subtitle {
-		margin-top: 1.87rem;
-		max-width: 21.875rem;
+		max-width: rem(195);
+		margin-top: 1rem;
+		@media (min-width: $md4) {
+			margin-top: 1.87rem;
+			max-width: 21.875rem;
+		}
 	}
 	// .banner__image
 	&__image {
-		width: 15.625rem;
-		height: 15.625rem;
 		flex-shrink: 0;
 		aspect-ratio: 1/1;
+		width: 12.5rem;
+		height: 12.5rem;
+		align-self: center;
+		@media (min-width: $md5) {
+			width: 15.625rem;
+			height: 15.625rem;
+		}
 	}
 }
 
 .article {
-	padding: rem(15) 0;
+	padding: rem(15) 0 rem(40);
 	@media (min-width: $md5) {
 		padding: rem(30) 0;
 	}
@@ -647,24 +669,34 @@ body {
 	}
 	// .article__body
 	&__body {
-		border-radius: 2.5rem;
 		background: #fff;
-		padding: 3.125rem;
-		border-radius: 2.5rem;
+		padding: 1.875rem 1.25rem 1.25rem 1.25rem;
+
+		border-radius: 1.875rem;
+		@media (min-width: $md3) {
+			border-radius: 2.5rem;
+			padding: 3.125rem;
+		}
 	}
 	// .article__title
 	&__title {
 	}
 	// .article__content
 	&__content {
-		margin-top: 2.5rem;
+		margin-top: 1.5rem;
+		@media (min-width: $md3) {
+			margin-top: 2.5rem;
+		}
 	}
 	// .article__image
 	&__image {
 		width: 100%;
 		& img {
 			width: 100%;
-			border-radius: 2.1875rem;
+			border-radius: 1.25rem;
+			@media (min-width: $md3) {
+				border-radius: 2.1875rem;
+			}
 		}
 	}
 	// .article__text
@@ -675,15 +707,28 @@ body {
 			&:not(:first-child) {
 				margin-top: 0.5em;
 			}
-			font-size: 1.125rem;
 			line-height: 150%;
+			font-size: 0.875rem;
+			@media (min-width: $md5) {
+				font-size: 1rem;
+			}
+			@media (min-width: $md3) {
+				font-size: 1.125rem;
+			}
 		}
 
 		& ul {
-			font-size: 1.125rem;
 			line-height: 150%;
 			list-style: disc;
 			padding-left: 1.25em;
+
+			font-size: 0.875rem;
+			@media (min-width: $md5) {
+				font-size: 1rem;
+			}
+			@media (min-width: $md3) {
+				font-size: 1.125rem;
+			}
 			& li {
 				&::marker {
 					font-size: 0.75em;
@@ -729,7 +774,13 @@ body {
 			color: #555;
 			& p {
 				margin: 0;
-				font-size: 1.125rem;
+				font-size: 0.875rem;
+				@media (min-width: $md5) {
+					font-size: 1rem;
+				}
+				@media (min-width: $md3) {
+					font-size: 1.125rem;
+				}
 			}
 		}
 
@@ -752,9 +803,15 @@ body {
 			&:not(:last-child) {
 				margin-bottom: 1.6667em;
 			}
-			font-size: 1.5rem;
 			font-weight: 700;
 			line-height: 120%;
+			font-size: 1.125rem;
+			@media (min-width: $md5) {
+				font-size: 1.375rem;
+			}
+			@media (min-width: $md3) {
+				font-size: 1.5rem;
+			}
 		}
 
 		& h4 {
@@ -797,14 +854,6 @@ body {
 }
 
 .heading {
-	padding: 1.25rem 0 0;
-	@media (min-width: $md5) {
-		padding: 2rem 0 0;
-	}
-	@media (min-width: $md2) {
-		padding: 2.5rem 0 0;
-	}
-
 	// .heading__container
 	&__container {
 	}
@@ -818,6 +867,11 @@ body {
 			@media (min-width: $md2) {
 				margin: 2.5rem 0 0;
 			}
+		}
+		@media (max-width: $md5) {
+			font-size: 2.375rem;
+			line-height: 100%;
+			letter-spacing: -0.095rem;
 		}
 		.color-grey {
 			font-weight: 400;

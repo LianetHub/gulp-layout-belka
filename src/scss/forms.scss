@@ -346,6 +346,23 @@
 
 .checkbox {
 	display: block;
+	&--grey {
+		.checkbox__btn {
+			background: #f7f7f7;
+			padding: 0.94rem 1.25rem;
+		}
+	}
+	&--small {
+		.checkbox__btn {
+			font-size: 0.875rem;
+			padding: rem(15) rem(20);
+			&::before {
+				width: 1.25rem;
+				height: 1.25rem;
+				font-size: 0.675rem;
+			}
+		}
+	}
 	// .checkbox__input
 	&__input {
 		&:checked {

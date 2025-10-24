@@ -1,13 +1,6 @@
 .breadcrumbs {
 	position: relative;
 	z-index: 3;
-	padding: 1.25rem 0;
-	@media (min-width: $md5) {
-		padding: 2rem 0;
-	}
-	@media (min-width: $md2) {
-		padding: 2.5rem 0;
-	}
 
 	&__list {
 		display: flex;
