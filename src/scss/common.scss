@@ -130,6 +130,45 @@ body {
 			margin-top: 2.5rem;
 		}
 	}
+	// .services__content
+	&__content {
+		position: relative;
+		margin-top: 1.25rem;
+		@media (min-width: $md5) {
+			margin-top: 1.5rem;
+		}
+		@media (min-width: $md3) {
+			margin-top: 2.5rem;
+		}
+	}
+	// .services__slider
+	&__slider {
+		overflow: visible;
+		@media (min-width: $md5) {
+			overflow: hidden;
+		}
+		.swiper-slide {
+			width: 15.625rem;
+			@media (min-width: $md4) {
+				width: 100%;
+			}
+		}
+		.service-card__image {
+			@media (max-width: $md4) {
+				height: 12.5rem;
+			}
+		}
+	}
+	&__prev {
+		@media (max-width: $md4) {
+			display: none;
+		}
+	}
+	&__next {
+		@media (max-width: $md4) {
+			display: none;
+		}
+	}
 	// .services__more
 	&__more {
 	}
@@ -191,7 +230,7 @@ body {
 		bottom: rem(10);
 		right: rem(10);
 		left: rem(10);
-		padding: rem(15);
+		padding: rem(15) 0.5rem;
 		margin-right: rem(50);
 		@media (min-width: $md5) {
 			margin-right: rem(53.8);

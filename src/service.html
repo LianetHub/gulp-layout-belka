@@ -12,8 +12,24 @@
                 "title": "Генеральная уборка",
                 "titleMarker": '<span class="color-accent">Генеральная</span> уборка'
                 })
+                @@include('./html/_calc.html')
                 @@include('./html/_articles.html')
                 @@include('./html/_feedback.html')
+                <section class="services">
+                    <div class="services__container">
+                        <h2 class="services__title title">Вы можете <span class="color-accent">заказать услуги</span></h2>
+                        <div class="services__content">
+                            <div class="services__slider swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_service.html', './html/json/_service-services.json')
+                                </div>
+                            </div>
+                            <button type="button" class="services__prev swiper-button-prev"></button>
+                            <button type="button" class="services__next swiper-button-next"></button>
+                        </div>
+                        <a href="" class="services__more more-btn btn btn-white btn-md icon-next">Все услуги</a>
+                    </div>
+                </section>
                 @@include('./html/_products.html', {
                 "title": 'Интернет-<span class="color-accent">магазин</span>',
                 })

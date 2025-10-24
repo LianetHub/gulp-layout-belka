@@ -384,8 +384,8 @@
 			padding: 1.25rem 0;
 		}
 	}
-	// .calc__types
-	&__types {
+	// .calc__tabs
+	&__tabs {
 		margin-top: 0.65rem;
 		padding: 0 rem(10);
 		@media (min-width: $md4) {
@@ -393,8 +393,8 @@
 			margin-top: 0.5rem;
 		}
 	}
-	// .calc__label
-	&__label {
+	// .calc__tab
+	&__tab {
 		background: #f7f7f7;
 	}
 	// .calc__content
@@ -407,6 +407,7 @@
 		display: none;
 		padding: rem(10);
 		border-radius: rem(20);
+		min-height: 100%;
 
 		@media (min-width: $md3) {
 			border-radius: 2.1875rem;

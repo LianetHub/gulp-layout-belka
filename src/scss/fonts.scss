@@ -22,8 +22,22 @@
 @font-face {
                             font-family: 'Manrope';
                             font-display: swap;
-                            src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
-                            font-weight: 500;
+                            src: url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff");
+                            font-weight: 300;
+                            font-style: normal;
+                        }
+@font-face {
+                            font-family: 'Montserrat';
+                            font-display: swap;
+                            src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+                            font-weight: 400;
+                            font-style: normal;
+                        }
+@font-face {
+                            font-family: 'Manrope';
+                            font-display: swap;
+                            src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+                            font-weight: 400;
                             font-style: normal;
                         }
 @font-face {
@@ -36,22 +50,8 @@
 @font-face {
                             font-family: 'Manrope';
                             font-display: swap;
-                            src: url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff");
-                            font-weight: 300;
-                            font-style: normal;
-                        }
-@font-face {
-                            font-family: 'Manrope';
-                            font-display: swap;
-                            src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
-                            font-weight: 400;
-                            font-style: normal;
-                        }
-@font-face {
-                            font-family: 'Montserrat';
-                            font-display: swap;
-                            src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
-                            font-weight: 400;
+                            src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+                            font-weight: 500;
                             font-style: normal;
                         }
 @font-face {

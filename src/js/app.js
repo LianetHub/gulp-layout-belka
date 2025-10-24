@@ -106,16 +106,40 @@ $(function () {
             $infoBlock.addClass('active');
         }
 
-    });
 
+        // calc tabs
+        if ($target.is('.calc__tab')) {
+            const $tab = $target;
+            const $tabsContainer = $tab.closest('.calc__tabs');
+            const tabIndex = $tabsContainer.find('.calc__tab').index($tab);
+            const $contentBlocks = $tab.closest('.calc__container').find('.calc__content').find('.calc__block');
+            const $targetBlock = $contentBlocks.eq(tabIndex);
+            const serviceName = $tab.text().trim();
 
-    $(document).on("keydown", function (e) {
-        if (e.key === "Escape" && $(".catalog").hasClass("catalog--open")) {
-            $(".catalog").removeClass("catalog--open");
-            $("body").removeClass("catalog-lock");
+            $tabsContainer.find('.calc__tab').removeClass('active');
+            $tab.addClass('active');
+
+            $contentBlocks.removeClass('active');
+            $targetBlock.addClass('active');
+
+            $tab.closest('.calc__container').find('.calc__result-service').text(serviceName.toLowerCase());
         }
+
+        // person accordion
+        if ($target.is('.person__accordion-title')) {
+            const $accordion = $target.closest('.person__accordion')
+            $accordion.toggleClass('active');
+            $accordion.find('.person__accordion-content').slideToggle()
+        }
+
     });
 
+
+    // Display block in person accordion if title is active
+    $('.person__accordion.active').each(function () {
+        const $content = $(this).find('.person__accordion-content');
+        $content.slideDown(0);
+    });
 
 
     // form submit validation
@@ -215,12 +239,7 @@ $(function () {
     }
 
 
-    // Display filter block in Сatalog if title is active
-    $('.filter__block-title.active').each(function () {
-        const $title = $(this);
-        const $content = $title.next('.filter__block-content');
-        $content.slideDown(0);
-    });
+
 
 
     // "grid" или "rows" в Каталоге
@@ -374,6 +393,27 @@ $(function () {
             pagination: {
                 el: '.clients__pagination',
                 clickable: true
+            }
+        });
+    }
+
+    if ($('.services__slider').length) {
+        new Swiper('.services__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            navigation: {
+                prevEl: '.services__prev',
+                nextEl: '.services__next'
+            },
+            breakpoints: {
+                767.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1399.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
             }
         });
     }
