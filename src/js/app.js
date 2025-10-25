@@ -379,24 +379,35 @@ $(function () {
         });
     }
 
-    if ($('.services__slider').length) {
-        new Swiper('.services__slider', {
-            slidesPerView: "auto",
-            spaceBetween: 10,
-            navigation: {
-                prevEl: '.services__prev',
-                nextEl: '.services__next'
-            },
-            breakpoints: {
-                767.98: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+    if ($('.services__content').length) {
+        $('.services__content').each(function () {
+
+            const currentSlider = $(this).find('.services__slider');
+            const isSmallSlider = currentSlider.hasClass('services__slider--small');
+
+            const prevButton = $(this).find('.services__prev');
+            const nextButton = $(this).find('.services__next');
+
+            new Swiper(currentSlider[0], {
+                slidesPerView: "auto",
+                spaceBetween: 10,
+
+                navigation: {
+                    prevEl: prevButton[0],
+                    nextEl: nextButton[0]
                 },
-                1399.98: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
+
+                breakpoints: {
+                    767.98: {
+                        slidesPerView: isSmallSlider ? 4 : 2,
+                        spaceBetween: 20,
+                    },
+                    1399.98: {
+                        slidesPerView: isSmallSlider ? 6 : 3,
+                        spaceBetween: 20,
+                    }
                 }
-            }
+            });
         });
     }
 

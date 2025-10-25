@@ -6,37 +6,37 @@
             <div class="calc__tabs nav-slider swiper">
                 <div class="swiper-wrapper">
                     <div class="nav-slider__item swiper-slide">
-                        <button type="button" class="calc__tab label active">
+                        <button type="button" class="calc__tab label active" data-service="Уборка офисов">
                             Уборка офисов
                         </button>
                     </div>
                     <div class="nav-slider__item swiper-slide">
-                        <button type="button" class="calc__tab label">
+                        <button type="button" class="calc__tab label" data-service="Уход за линолеумом">
                             Уход за линолеумом
                         </button>
                     </div>
                     <div class="nav-slider__item swiper-slide">
-                        <button type="button" class="calc__tab label">
+                        <button type="button" class="calc__tab label" data-service="Уход за паркетным полом">
                             Уход за паркетным полом
                         </button>
                     </div>
                     <div class="nav-slider__item swiper-slide">
-                        <button type="button" class="calc__tab label">
+                        <button type="button" class="calc__tab label" data-service="Уход за мраморным полом">
                             Уход за мраморным полом
                         </button>
                     </div>
                     <div class="nav-slider__item swiper-slide">
-                        <button type="button" class="calc__tab label">
+                        <button type="button" class="calc__tab label" data-service="Мойка окон">
                             Мойка окон
                         </button>
                     </div>
                     <div class="nav-slider__item swiper-slide">
-                        <button type="button" class="calc__tab label">
+                        <button type="button" class="calc__tab label" data-service="Утепление окон">
                             Утепление окон
                         </button>
                     </div>
                     <div class="nav-slider__item swiper-slide">
-                        <button type="button" class="calc__tab label">
+                        <button type="button" class="calc__tab label" data-service="Мойка витрин">
                             Мойка витрин
                         </button>
                     </div>
@@ -51,60 +51,60 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="room_type">
                                                 <option value="" disabled selected>Тип помещения</option>
-                                                <option value="">Промышленное производство</option>
-                                                <option value="">Пищевое производство</option>
-                                                <option value="">Автомобильное производство</option>
-                                                <option value="">Складское помещение</option>
-                                                <option value="">Офисное помещение</option>
-                                                <option value="">Учебное заведение</option>
-                                                <option value="">Детское заведение</option>
-                                                <option value="">Квартира</option>
-                                                <option value="">Коттедж</option>
-                                                <option value="">Другое</option>
+                                                <option value="Промышленное производство">Промышленное производство</option>
+                                                <option value="Пищевое производство">Пищевое производство</option>
+                                                <option value="Автомобильное производство">Автомобильное производство</option>
+                                                <option value="Складское помещение">Складское помещение</option>
+                                                <option value="Офисное помещение">Офисное помещение</option>
+                                                <option value="Учебное заведение">Учебное заведение</option>
+                                                <option value="Детское заведение">Детское заведение</option>
+                                                <option value="Квартира">Квартира</option>
+                                                <option value="Коттедж">Коттедж</option>
+                                                <option value="Другое">Другое</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="cleaning_type">
                                                 <option value="" disabled selected>Вид уборки</option>
-                                                <option value="">Базовая уборка</option>
-                                                <option value="">Уборка после строительства</option>
-                                                <option value="">Уборка после ремонта</option>
+                                                <option value="Базовая уборка">Базовая уборка</option>
+                                                <option value="Уборка после строительства">Уборка после строительства</option>
+                                                <option value="Уборка после ремонта">Уборка после ремонта</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="number" name="" class="form__control" placeholder="Площадь, м2">
+                                        <input type="number" name="area" class="form__control" placeholder="Площадь, м2">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="ceiling_height">
                                                 <option value="" disabled selected>Высота потолков</option>
-                                                <option value="">до 2,5</option>
-                                                <option value="">2,5-2,7</option>
-                                                <option value="">2,7-3,0</option>
-                                                <option value="">3,0-3,5</option>
-                                                <option value="">3,5-4,0</option>
-                                                <option value="">4,0-5,0</option>
+                                                <option value="до 2,5">до 2,5</option>
+                                                <option value="2,5-2,7">2,5-2,7</option>
+                                                <option value="2,7-3,0">2,7-3,0</option>
+                                                <option value="3,0-3,5">3,0-3,5</option>
+                                                <option value="3,5-4,0">3,5-4,0</option>
+                                                <option value="4,0-5,0">4,0-5,0</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="pollution_degree">
                                                 <option value="" disabled selected>Степерь загрязнения</option>
-                                                <option value="">Слабая</option>
-                                                <option value="">Средняя</option>
-                                                <option value="">Сильная</option>
+                                                <option value="Слабая">Слабая</option>
+                                                <option value="Средняя">Средняя</option>
+                                                <option value="Сильная">Сильная</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="" class="checkbox__input hidden" hidden>
+                                            <input type="checkbox" name="has_furniture" class="checkbox__input hidden" hidden>
                                             <span class="checkbox__btn">
                                                 Наличие мебели
                                             </span>
@@ -115,21 +115,21 @@
                             <div class="calc__block">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="number" name="" class="form__control" placeholder="Общая площадь уборки, м2">
+                                        <input type="number" name="linoleum_area" class="form__control" placeholder="Общая площадь уборки, м2">
                                     </div>
                                 </div>
                             </div>
                             <div class="calc__block">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="number" name="" class="form__control" placeholder="Общая площадь уборки, м2">
+                                        <input type="number" name="parquet_area" class="form__control" placeholder="Общая площадь уборки, м2">
                                     </div>
                                 </div>
                             </div>
                             <div class="calc__block">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="number" name="" class="form__control" placeholder="Общая площадь уборки, м2">
+                                        <input type="number" name="marble_area" class="form__control" placeholder="Общая площадь уборки, м2">
                                     </div>
                                 </div>
                             </div>
@@ -137,36 +137,36 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="glazing_type">
                                                 <option value="" disabled selected>Тип остекления</option>
-                                                <option value="">Cтеклопакет</option>
-                                                <option value="">Двойная рама</option>
+                                                <option value="Cтеклопакет">Cтеклопакет</option>
+                                                <option value="Двойная рама">Двойная рама</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="floor_range">
                                                 <option value="" disabled selected>Этажность</option>
-                                                <option value="">1-5</option>
-                                                <option value="">6-9</option>
-                                                <option value="">10-16</option>
-                                                <option value="">17-24</option>
-                                                <option value="">25-32</option>
-                                                <option value="">выше 33-го</option>
+                                                <option value="1-5">1-5</option>
+                                                <option value="6-9">6-9</option>
+                                                <option value="10-16">10-16</option>
+                                                <option value="17-24">17-24</option>
+                                                <option value="25-32">25-32</option>
+                                                <option value="выше 33-го">выше 33-го</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="window_height">
                                                 <option value="" disabled selected>Высота потолков</option>
-                                                <option value="">до 2,5</option>
-                                                <option value="">2,5-2,7</option>
-                                                <option value="">2,7-3,0</option>
-                                                <option value="">3,0-3,5</option>
-                                                <option value="">3,5-4,0</option>
-                                                <option value="">4,0-5,0</option>
+                                                <option value="до 2,5">до 2,5</option>
+                                                <option value="2,5-2,7">2,5-2,7</option>
+                                                <option value="2,7-3,0">2,7-3,0</option>
+                                                <option value="3,0-3,5">3,0-3,5</option>
+                                                <option value="3,5-4,0">3,5-4,0</option>
+                                                <option value="4,0-5,0">4,0-5,0</option>
                                             </select>
                                         </div>
                                     </div>
@@ -174,15 +174,15 @@
                                         <div class="calc__windows">
                                             <div class="calc__window">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-md-3">
                                                         <div class="calc__window-type">
                                                             1-створчатое
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <input type="number" name="" class="form__control" placeholder="Количество, шт.">
+                                                    <div class="col-md-6 col-8">
+                                                        <input type="number" name="qty_window_1" class="form__control" placeholder="Количество, шт.">
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-md-3 col-4">
                                                         <div class="calc__window-result">
                                                             0 ₽
                                                         </div>
@@ -191,15 +191,15 @@
                                             </div>
                                             <div class="calc__window">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-md-3">
                                                         <div class="calc__window-type">
                                                             2-створчатое
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <input type="number" name="" class="form__control" placeholder="Количество, шт." value="10">
+                                                    <div class="col-md-6 col-8">
+                                                        <input type="number" name="qty_window_2" class="form__control" placeholder="Количество, шт." value="10">
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-md-3 col-4">
                                                         <div class="calc__window-result active">
                                                             100 000 ₽
                                                         </div>
@@ -208,15 +208,15 @@
                                             </div>
                                             <div class="calc__window">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-md-3">
                                                         <div class="calc__window-type">
                                                             3-створчатое
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <input type="number" name="" class="form__control" placeholder="Количество, шт.">
+                                                    <div class="col-md-6 col-8">
+                                                        <input type="number" name="qty_window_3" class="form__control" placeholder="Количество, шт.">
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-md-3 col-4">
                                                         <div class="calc__window-result">
                                                             0 ₽
                                                         </div>
@@ -225,15 +225,15 @@
                                             </div>
                                             <div class="calc__window">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-md-3">
                                                         <div class="calc__window-type">
                                                             Балконная дверь
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <input type="number" name="" class="form__control" placeholder="Количество, шт.">
+                                                    <div class="col-md-6 col-8">
+                                                        <input type="number" name="qty_balcony_door" class="form__control" placeholder="Количество, шт.">
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-md-3 col-4">
                                                         <div class="calc__window-result">
                                                             0 ₽
                                                         </div>
@@ -242,16 +242,16 @@
                                             </div>
                                             <div class="calc__window">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-md-3">
                                                         <div class="calc__window-type">
                                                             Балкон, эркер <br>
                                                             <span class="color-grey">4 секции</span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <input type="number" name="" class="form__control" placeholder="Количество, шт.">
+                                                    <div class="col-md-6 col-8">
+                                                        <input type="number" name="qty_balcony_4_sections" class="form__control" placeholder="Количество, шт.">
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-md-3 col-4">
                                                         <div class="calc__window-result">
                                                             0 ₽
                                                         </div>
@@ -260,15 +260,15 @@
                                             </div>
                                             <div class="calc__window">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-md-3">
                                                         <div class="calc__window-type">
                                                             Витринное остекление
                                                         </div>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <input type="number" name="" class="form__control" placeholder="Площадь, м2">
+                                                    <div class="col-md-6 col-8">
+                                                        <input type="number" name="area_showcase" class="form__control" placeholder="Площадь, м2">
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-md-3 col-4">
                                                         <div class="calc__window-result">
                                                             0 ₽
                                                         </div>
@@ -283,10 +283,10 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="glazing_type_insulation">
                                                 <option value="" disabled selected>Тип остекления</option>
-                                                <option value="">Cтеклопакет</option>
-                                                <option value="">Двойная рама</option>
+                                                <option value="Cтеклопакет">Cтеклопакет</option>
+                                                <option value="Двойная рама">Двойная рама</option>
                                             </select>
                                         </div>
                                     </div>
@@ -295,7 +295,7 @@
                             <div class="calc__block">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="number" name="" class="form__control" placeholder="Общая площадь витрин, м2">
+                                        <input type="number" name="showcase_area" class="form__control" placeholder="Общая площадь витрин, м2">
                                     </div>
                                 </div>
                             </div>
@@ -304,30 +304,30 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="dry_cleaning_type">
                                                 <option value="" disabled selected>Химчистка</option>
-                                                <option value="">Коврик в прихожей</option>
-                                                <option value="">Коврик в ванной</option>
-                                                <option value="">Cинтетический ковёр</option>
-                                                <option value="">Полушерстяной ковёр</option>
+                                                <option value="Коврик в прихожей">Коврик в прихожей</option>
+                                                <option value="Коврик в ванной">Коврик в ванной</option>
+                                                <option value="Cинтетический ковёр">Cинтетический ковёр</option>
+                                                <option value="Полушерстяной ковёр">Полушерстяной ковёр</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="number" name="" class="form__control" placeholder="Площадь, м2">
+                                        <input type="number" name="dry_cleaning_area" class="form__control" placeholder="Площадь, м2">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="pile_length">
                                                 <option value="" disabled selected>Длина ворса</option>
-                                                <option value="">Стандартный ворс</option>
-                                                <option value="">Длинный ворс</option>
+                                                <option value="Стандартный ворс">Стандартный ворс</option>
+                                                <option value="Длинный ворс">Длинный ворс</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="" class="checkbox__input hidden" hidden>
+                                            <input type="checkbox" name="has_pet_hair" class="checkbox__input hidden" hidden>
                                             <span class="checkbox__btn">
                                                 Наличие следов шерсти
                                             </span>
@@ -335,7 +335,7 @@
                                     </div>
                                     <div class="col-12">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="" class="checkbox__input hidden" hidden>
+                                            <input type="checkbox" name="has_specific_stains" class="checkbox__input hidden" hidden>
                                             <span class="checkbox__btn">
                                                 Наличие специфических загрязнений (кровь, краска, жир и проч.)
                                             </span>
@@ -343,7 +343,7 @@
                                     </div>
                                     <div class="col-12">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="" class="checkbox__input hidden" hidden>
+                                            <input type="checkbox" name="antistatic_treatment" class="checkbox__input hidden" hidden>
                                             <span class="checkbox__btn">
                                                 Антистатическая обработка ковров
                                             </span>
@@ -354,19 +354,19 @@
                             <div class="calc__block active">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="text" name="" class="form__control" placeholder="Адрес объекта">
+                                        <input type="text" name="object_address" class="form__control" placeholder="Адрес объекта">
                                     </div>
                                     <div class="col-12">
                                         <div class="select">
-                                            <select data-required name="">
+                                            <select data-required name="distance_from_mkad">
                                                 <option value="" disabled selected>Удаленность от МКАД</option>
-                                                <option value="">0 (пределы МКАД)</option>
-                                                <option value="">до 10</option>
-                                                <option value="">до 20</option>
-                                                <option value="">до 30</option>
-                                                <option value="">до 40</option>
-                                                <option value="">до 50</option>
-                                                <option value="">до 100</option>
+                                                <option value="0">0 (пределы МКАД)</option>
+                                                <option value="до 10">до 10</option>
+                                                <option value="до 20">до 20</option>
+                                                <option value="до 30">до 30</option>
+                                                <option value="до 40">до 40</option>
+                                                <option value="до 50">до 50</option>
+                                                <option value="до 100">до 100</option>
                                             </select>
                                         </div>
                                     </div>
@@ -381,7 +381,7 @@
                             <div class="calc__result-total">
                                 <div class="calc__result-caption">Стоимость <span class="calc__result-service">уборки офиса</span></div>
                                 <div class="calc__result-coast title-sm">
-                                    от <span class="calc__result-value">1 000</span>
+                                    от <span id="finalPrice" class="calc__result-value">1 000</span>
                                 </div>
                             </div>
                             <a href="#callback" data-fancybox class="calc__result-btn btn btn-primary btn-lg btn-fullwidth">Заказать уборку</a>

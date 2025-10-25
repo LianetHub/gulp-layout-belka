@@ -1,0 +1,62 @@
+[
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/01.jpg",
+        "name": "Очистка мягкой мебели"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/02.jpg",
+        "name": "Мытьё полов"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/03.jpg",
+        "name": "Очистка плинтусов"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/04.jpg",
+        "name": "Вынос мусора"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/04.jpg",
+        "name": "Удаление пятен с поверхностей"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/04.jpg",
+        "name": "Чистка и дезинфекция санузлов"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/01.jpg",
+        "name": "Очистка мягкой мебели"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/02.jpg",
+        "name": "Мытьё полов"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/03.jpg",
+        "name": "Очистка плинтусов"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/04.jpg",
+        "name": "Вынос мусора"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/04.jpg",
+        "name": "Удаление пятен с поверхностей"
+    },
+    {
+        "className": "swiper-slide",
+        "image": "@img/services/04.jpg",
+        "name": "Чистка и дезинфекция санузлов"
+    }
+]

@@ -12,6 +12,20 @@
                 "title": "Генеральная уборка",
                 "titleMarker": '<span class="color-accent">Генеральная</span> уборка'
                 })
+                <div class="services">
+                    <div class="services__container">
+                        <h2 class="services__title title">В уборку входит</h2>
+                        <div class="services__content">
+                            <div class="services__slider services__slider--small swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_service-card.html', './html/json/_service-slider.json')
+                                </div>
+                            </div>
+                            <button type="button" class="services__prev swiper-button-prev"></button>
+                            <button type="button" class="services__next swiper-button-next"></button>
+                        </div>
+                    </div>
+                </div>
                 @@include('./html/_calc.html', {
                 "titleClass": "",
                 "hasTabs": false

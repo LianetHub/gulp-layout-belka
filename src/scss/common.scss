@@ -148,6 +148,9 @@ body {
 			overflow: hidden;
 		}
 		.swiper-slide {
+			display: flex;
+			flex-direction: column;
+			height: auto;
 			width: 15.625rem;
 			@media (min-width: $md4) {
 				width: 100%;
@@ -176,6 +179,20 @@ body {
 
 .service-card {
 	position: relative;
+	background: #fff;
+	border-radius: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+
+	&--small {
+		.service-card__image {
+			border-radius: 1.25rem;
+			height: auto !important;
+			min-height: auto;
+			aspect-ratio: math.div(250, 180);
+		}
+	}
 	// .service-card__image
 	&__image {
 		overflow: hidden;
@@ -265,6 +282,15 @@ body {
 				height: 3.75rem;
 			}
 		}
+	}
+	&__body {
+		padding: 1.25rem;
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 110%;
+		letter-spacing: -0.05rem;
+		display: block;
+		flex: 1 1 auto;
 	}
 }
 

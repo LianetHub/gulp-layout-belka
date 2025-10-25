@@ -527,4 +527,46 @@
 			}
 		}
 	}
+	// .calc__windows
+	&__windows {
+		margin-top: rem(10);
+		padding: rem(10);
+		border-top: rem(1) solid #eee;
+	}
+	// .calc__window
+	&__window {
+		.row {
+			align-items: center;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .calc__window-type
+	&__window-type {
+		line-height: 100%;
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1.125rem;
+		}
+	}
+	// .calc__window-result
+	&__window-result {
+		border-radius: 6.25rem;
+		background: #eee;
+		border-radius: 6.25rem;
+		text-align: center;
+		color: #999;
+		line-height: 100%;
+		font-size: 0.875rem;
+		padding: 1.25rem 0.5rem;
+		@media (min-width: $md5) {
+			padding: 1.4375rem 1.875rem;
+			font-size: 1.125rem;
+		}
+		&.active {
+			background: #70c700;
+			color: #fff;
+		}
+	}
 }
