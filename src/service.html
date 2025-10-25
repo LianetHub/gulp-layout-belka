@@ -12,7 +12,10 @@
                 "title": "Генеральная уборка",
                 "titleMarker": '<span class="color-accent">Генеральная</span> уборка'
                 })
-                @@include('./html/_calc.html')
+                @@include('./html/_calc.html', {
+                "titleClass": "",
+                "hasTabs": false
+                })
                 @@include('./html/_articles.html')
                 @@include('./html/_feedback.html')
                 <section class="services">

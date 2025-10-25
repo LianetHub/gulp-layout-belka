@@ -380,7 +380,6 @@
 		max-width: 17rem;
 		@media (min-width: $md4) {
 			max-width: 100%;
-			text-align: center;
 			padding: 1.25rem 0;
 		}
 	}
@@ -401,20 +400,28 @@
 	&__content {
 		margin-top: rem(20);
 	}
+	// .calc__blocks
+	&__blocks {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
 	// .calc__block
 	&__block {
-		background: #f7f7f7;
+		flex: 1 1 auto;
 		display: none;
 		padding: rem(10);
+		background: #f7f7f7;
 		border-radius: rem(20);
-		min-height: 100%;
-
 		@media (min-width: $md3) {
 			border-radius: 2.1875rem;
 			padding: rem(30);
 		}
 		@media (min-width: $md1) {
 			padding: 3.125rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
 		}
 		.row {
 			--gutter-x: #{rem(5)};

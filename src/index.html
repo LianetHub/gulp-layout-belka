@@ -110,7 +110,10 @@
                         <a href="" class="services__more more-btn btn btn-white btn-md icon-next">Все услуги</a>
                     </div>
                 </section>
-                @@include('./html/_calc.html')
+                @@include('./html/_calc.html', {
+                "titleClass": " text-center",
+                "hasTabs": true
+                })
                 @@include('./html/_products.html', {
                 "title": 'Интернет-<span class="color-accent">магазин</span>',
                 })
