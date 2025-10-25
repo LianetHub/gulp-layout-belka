@@ -10,6 +10,134 @@
                 @@include('./html/_heading.html', {
                 "titleMarker": 'Корзина <span class="color-grey">14</span>'
                 })
+                <section class="cart">
+                    <div class="cart__container">
+                        <div class="row">
+                            <div class="col-xxl-9 col-xl-8">
+                                <div class="cart__header">
+                                    <label class="cart__checkbox checkbox">
+                                        <input type="checkbox" name="select_all" checked class="checkbox__input hidden" hidden>
+                                        <span class="checkbox__btn">
+                                            Выбрать все
+                                        </span>
+                                    </label>
+                                    <button type="button" class="cart__clear icon-trash">Удалить выбранные</button>
+                                </div>
+                                <div class="cart__list">
+                                    @@loop('./html/templates/_cart-order.html', './html/json/_cart.json')
+                                </div>
+                                <div class="cart__block">
+                                    <div class="cart__block-caption">Способ оплаты</div>
+                                    <div class="cart__payment">
+                                        <div class="cart__payment-items">
+                                            <label class="cart__payment-item">
+                                                <input type="radio" name="payment" value="cash" class="cart__payment-input hidden" hidden>
+                                                <div class="cart__payment-btn icon-credit-card">
+                                                    Онлайн-оплата
+                                                </div>
+                                            </label>
+                                            <label class="cart__payment-item">
+                                                <input type="radio" name="payment" value="online" class="cart__payment-input hidden" hidden>
+                                                <div class="cart__payment-btn icon-rubble">
+                                                    Наличные
+                                                </div>
+                                            </label>
+                                            <label class="cart__payment-item">
+                                                <input type="radio" name="payment" value="non_cash" class="cart__payment-input hidden" hidden>
+                                                <div class="cart__payment-btn icon-online-money">
+                                                    Безналичные
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="cart__payment-content">
+                                            <div id="payment_cash" class="cart__payment-block">
+                                                <div class="cart__payment-status icon-credit-card success">
+                                                    <p>
+                                                        <strong>
+                                                            Платёж прошел успешно. <br>
+                                                            Ожидайте звонка менеджера.
+                                                        </strong>
+                                                    </p>
+                                                </div>
+                                                <div class="cart__payment-status icon-credit-card error">
+                                                    <p class="text-uppercase"><strong>Платеж не прошел!</strong></p>
+                                                    <p>Проверьте правильность ввода данных и наличие средств на банковской карте.</p>
+                                                    <p><strong>По всем вопросам свяжитесь по тел.: 8-800-123-45-65</strong></p>
+                                                </div>
+                                            </div>
+                                            <div id="payment_online" class="cart__payment-block ">
+                                                <p>Оплата наличными при получении.</p>
+                                            </div>
+                                            <div id="payment_non_cash" class="cart__payment-block ">
+                                                <label class="cart__payment-file">
+                                                    <input type="file" name="file" class="cart__payment-file-input hidden" hidden>
+                                                    <span class="cart__payment-file-btn icon-online-money">
+                                                        <span class="cart__payment-file-caption">Загрузить реквизиты</span>
+                                                        <span class="cart__payment-file-formats">(.doc . pdf. xls)</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__block">
+                                    <div class="cart__block-caption">Способ получения</div>
+                                    <div class="cart__block-options">
+                                        <label class="cart__block-option">
+                                            <input type="radio" checked name="delivery_method" value="courier" class="cart__block-option-input hidden" hidden>
+                                            <span class="cart__block-option-btn">Курьером</span>
+                                        </label>
+                                        <label class="cart__block-option">
+                                            <input type="radio" name="delivery_method" value="pickup" class="cart__block-option-input hidden" hidden>
+                                            <span class="cart__block-option-btn">Самовывоз</span>
+                                        </label>
+                                    </div>
+                                    <div class="cart__block-fields">
+                                        <input type="text" name="address" class="form__control" placeholder="Введите адрес">
+                                    </div>
+                                </div>
+                                <div class="cart__block">
+                                    <div class="cart__block-caption">Получатель</div>
+                                    <div class="cart__block-options">
+                                        <label class="cart__block-option">
+                                            <input type="radio" checked name="customer_status" value="new" class="cart__block-option-input hidden" hidden>
+                                            <span class="cart__block-option-btn">Новый покупатель</span>
+                                        </label>
+                                        <label class="cart__block-option">
+                                            <input type="radio" name="customer_status" value="returning" class="cart__block-option-input hidden" hidden>
+                                            <span class="cart__block-option-btn">Уже покупал</span>
+                                        </label>
+                                    </div>
+                                    <div class="cart__block-fields">
+                                        <input type="text" name="name" class="form__control" placeholder="Введите адрес">
+                                        <input type="tel" name="phone" class="form__control" placeholder="+7 (...) ...- ... - ...">
+                                        <input type="email" name="email" class="form__control" placeholder="Введите E-mail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4">
+                                <div class="cart__total">
+                                    <div class="cart__total-title">Детали заказа</div>
+                                    <div class="cart__total-body">
+                                        <div class="cart__total-info">
+                                            <div class="cart__total-item">14 товаров</div>
+                                            <div class="cart__total-item">31 800 ₽</div>
+                                        </div>
+                                        <div class="cart__total-sale">
+                                            <div class="cart__total-item">Скидка</div>
+                                            <div class="cart__total-item">-12 000 ₽</div>
+                                        </div>
+                                    </div>
+                                    <div class="cart__total-info">
+                                        <div class="cart__total-item">Итого</div>
+                                        <div class="cart__total-item">19 800 ₽</div>
+                                    </div>
+                                    <a href="" class="cart__total-btn btn btn-fullwidth btn-primary ">Оформить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 @@include('./html/_products.html', {
                 "title": 'Похожие <span class="color-accent">товары</span>',
                 })

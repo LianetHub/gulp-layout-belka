@@ -238,24 +238,6 @@ $(function () {
         return cleaned.length >= 10 && /^[1-9]\d{9,14}$/.test(cleaned);
     }
 
-
-
-
-
-    // "grid" или "rows" в Каталоге
-
-    $('.shop__grid-input').on('change', function () {
-        const gridType = $(this).val();
-        const $shopItems = $('.shop__items');
-
-        if (gridType === 'rows') {
-            $shopItems.addClass('shop__items--row');
-        } else {
-            $shopItems.removeClass('shop__items--row');
-        }
-    });
-
-
     // quantity block
     $('.quantity-block').each(function () {
         const $block = $(this);
@@ -932,6 +914,24 @@ $(function () {
         });
     }
 
+
+    // cart details payment
+    function showPaymentBlock(value) {
+
+        $('.cart__payment-block').hide();
+        const targetId = `#payment_${value}`;
+
+        $(targetId).show();
+    }
+    $('input[name="payment"]').on('change', function () {
+        const selectedValue = $(this).val();
+        showPaymentBlock(selectedValue);
+    });
+
+    const defaultChecked = $('input[name="payment"]:checked');
+    if (defaultChecked.length) {
+        showPaymentBlock(defaultChecked.val());
+    }
 
 
 });

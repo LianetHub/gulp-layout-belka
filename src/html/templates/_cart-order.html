@@ -1,0 +1,31 @@
+<div class="cart-item" id="product-@@id">
+    <label class="cart-item__checkbox checkbox">
+        <input type="checkbox" name="select_product_@@id" checked class="checkbox__input hidden" hidden>
+        <span class="checkbox__btn"></span>
+    </label>
+    <div class="cart-item__main">
+        <div class="cart-item__thumb">
+            <img src="@@thumb" class="cover-image" alt="Фото товара">
+        </div>
+        <div class="cart-item__info">
+            <div class="cart-item__sku">@@sku</div>
+            <ul class="cart-item__stats">
+                @@for (var i = 0; i < stats.length; i++) { <li class="cart-item__stat">
+                    <span class="cart-item__stat-property">`+stats[i].property+`:</span>
+                    <span class="cart-item__stat-value">`+stats[i].value+`</span>
+                    </li>
+                    }
+            </ul>
+        </div>
+    </div>
+    <div class="cart-item__price">
+        <div class="cart-item__price-current">@@price</div>
+        <div class="cart-item__price-old">@@oldPrice</div>
+    </div>
+    <div class="cart-item__quantity quantity-block">
+        <button type="button" class="quantity-block__down icon-minus"></button>
+        <input type="number" name="quantity_product_@@id" class="quantity-block__input" value="1">
+        <button type="button" class="quantity-block__up icon-plus"></button>
+    </div>
+    <button type="button" aria-label="Удалить из корзины" class="cart-item__remove icon-trash"></button>
+</div>

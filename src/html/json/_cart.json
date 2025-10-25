@@ -1,0 +1,233 @@
+[
+    {
+        "id": "10001",
+        "thumb": "@img/product.png",
+        "sku": "Артикул № AVQ 380-2",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Numatic"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Италия"
+            },
+            {
+                "property": "Категории",
+                "value": "Пылесосы для сухой уборки"
+            }
+        ],
+        "price": "1 650 ₽",
+        "oldPrice": "2 650 ₽"
+    },
+    {
+        "id": "10002",
+        "thumb": "@img/goods/01.jpg",
+        "sku": "Артикул № XLT 500-1",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Kärcher"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Германия"
+            },
+            {
+                "property": "Категории",
+                "value": "Пароочистители"
+            }
+        ],
+        "price": "5 990 ₽",
+        "oldPrice": "7 500 ₽"
+    },
+    {
+        "id": "10003",
+        "thumb": "@img/goods/02.jpg",
+        "sku": "Артикул № ZAP 1200",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Xiaomi"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Китай"
+            },
+            {
+                "property": "Категории",
+                "value": "Роботы-пылесосы"
+            }
+        ],
+        "price": "22 500 ₽",
+        "oldPrice": "28 000 ₽"
+    },
+    {
+        "id": "10004",
+        "thumb": "@img/goods/03.jpg",
+        "sku": "Артикул № MBR 150-L",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Bissell"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "США"
+            },
+            {
+                "property": "Категории",
+                "value": "Моющие пылесосы"
+            }
+        ],
+        "price": "14 800 ₽",
+        "oldPrice": "19 000 ₽"
+    },
+    {
+        "id": "10005",
+        "thumb": "@img/goods/04.jpg",
+        "sku": "Артикул № CYC 77-A",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Dyson"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Малайзия"
+            },
+            {
+                "property": "Категории",
+                "value": "Беспроводные пылесосы"
+            }
+        ],
+        "price": "34 999 ₽",
+        "oldPrice": "42 000 ₽"
+    },
+    {
+        "id": "10006",
+        "thumb": "@img/goods/05.jpg",
+        "sku": "Артикул № PHO 600-SL",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Philips"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Польша"
+            },
+            {
+                "property": "Категории",
+                "value": "Пылесосы с мешком"
+            }
+        ],
+        "price": "8 750 ₽",
+        "oldPrice": "10 500 ₽"
+    },
+    {
+        "id": "10007",
+        "thumb": "@img/goods/01.jpg",
+        "sku": "Артикул № R-G 9000",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Samsung"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Вьетнам"
+            },
+            {
+                "property": "Категории",
+                "value": "Вертикальные пылесосы"
+            }
+        ],
+        "price": "16 300 ₽",
+        "oldPrice": "20 000 ₽"
+    },
+    {
+        "id": "10008",
+        "thumb": "@img/goods/02.jpg",
+        "sku": "Артикул № H-W-250",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Hoover"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Чехия"
+            },
+            {
+                "property": "Категории",
+                "value": "Пылесосы для сухой и влажной уборки"
+            }
+        ],
+        "price": "11 200 ₽",
+        "oldPrice": "13 500 ₽"
+    },
+    {
+        "id": "10009",
+        "thumb": "@img/goods/03.jpg",
+        "sku": "Артикул № E-X9 T-MAX",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Electrolux"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Швеция"
+            },
+            {
+                "property": "Категории",
+                "value": "Пылесосы без мешка (контейнерные)"
+            }
+        ],
+        "price": "9 990 ₽",
+        "oldPrice": "12 500 ₽"
+    },
+    {
+        "id": "10010",
+        "thumb": "@img/goods/04.jpg",
+        "sku": "Артикул № T-FLEX 8",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Tefal"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Франция"
+            },
+            {
+                "property": "Категории",
+                "value": "Ручные пылесосы"
+            }
+        ],
+        "price": "4 150 ₽",
+        "oldPrice": "5 500 ₽"
+    },
+    {
+        "id": "10011",
+        "thumb": "@img/goods/05.jpg",
+        "sku": "Артикул № RD-450",
+        "stats": [
+            {
+                "property": "Производитель",
+                "value": "Redmond"
+            },
+            {
+                "property": "Страна-производитель",
+                "value": "Китай"
+            },
+            {
+                "property": "Категории",
+                "value": "Пылесосы для сухой уборки"
+            }
+        ],
+        "price": "3 900 ₽",
+        "oldPrice": "4 900 ₽"
+    }
+]

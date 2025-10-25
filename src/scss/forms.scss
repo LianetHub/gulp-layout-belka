@@ -418,42 +418,42 @@
 
 @import "./modules/select";
 
-.switcher {
-	// .switcher__input
-	&__input {
-		&:checked {
-			& + .switcher__btn {
-				&::before {
-					left: rem(22);
-				}
-				background: $pink;
-			}
-		}
-	}
-	// .switcher__btn
-	&__btn {
-		position: relative;
-		width: rem(44);
-		height: rem(24);
-		border-radius: 0.75rem;
-		background: #f2f4f7;
-		display: block;
-		cursor: pointer;
-		transition: background-color 0.3s ease 0s;
-		&::before {
-			content: "";
-			position: absolute;
-			top: rem(2);
-			left: rem(2);
-			width: rem(20);
-			transition: left 0.3s ease 0s;
-			border-radius: 50%;
-			background: #fff;
-			filter: drop-shadow(0 rem(1) rem(2) rgba(16, 24, 40, 0.06)) drop-shadow(0 rem(1) rem(3) rgba(16, 24, 40, 0.1));
-			height: calc(100% - rem(4));
-		}
-	}
-}
+// .switcher {
+// 	// .switcher__input
+// 	&__input {
+// 		&:checked {
+// 			& + .switcher__btn {
+// 				&::before {
+// 					left: rem(22);
+// 				}
+// 				background: $pink;
+// 			}
+// 		}
+// 	}
+// 	// .switcher__btn
+// 	&__btn {
+// 		position: relative;
+// 		width: rem(44);
+// 		height: rem(24);
+// 		border-radius: 0.75rem;
+// 		background: #f2f4f7;
+// 		display: block;
+// 		cursor: pointer;
+// 		transition: background-color 0.3s ease 0s;
+// 		&::before {
+// 			content: "";
+// 			position: absolute;
+// 			top: rem(2);
+// 			left: rem(2);
+// 			width: rem(20);
+// 			transition: left 0.3s ease 0s;
+// 			border-radius: 50%;
+// 			background: #fff;
+// 			filter: drop-shadow(0 rem(1) rem(2) rgba(16, 24, 40, 0.06)) drop-shadow(0 rem(1) rem(3) rgba(16, 24, 40, 0.1));
+// 			height: calc(100% - rem(4));
+// 		}
+// 	}
+// }
 
 .option {
 	// .option__input
