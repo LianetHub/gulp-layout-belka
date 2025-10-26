@@ -2,29 +2,7 @@
 
 $(function () {
 
-    // preloader
-    // if ($('.preloader').length > 0) {
-    //     let counting = setInterval(function () {
-    //         let loader = $('#percentage');
-    //         let currval = parseInt(loader.text());
 
-    //         if (currval < 90) {
-    //             loader.text(++currval);
-    //         } else if (currval < 95 && document.readyState === "interactive") {
-    //             loader.text(95);
-    //         } else if (currval < 99 && document.readyState === "complete") {
-    //             loader.text(99);
-    //         }
-
-    //         if (currval >= 99 && document.readyState === "complete") {
-    //             clearInterval(counting);
-    //             loader.text(100);
-    //             setTimeout(function () {
-    //                 $('body').removeClass('preloading').addClass('is-loaded');
-    //             }, 300);
-    //         }
-    //     }, 20);
-    // }
 
     if (typeof Fancybox !== "undefined" && Fancybox !== null) {
         Fancybox.bind("[data-fancybox]", {
@@ -106,7 +84,6 @@ $(function () {
             $infoBlock.addClass('active');
         }
 
-
         // calc tabs
         if ($target.is('.calc__tab')) {
             const $tab = $target;
@@ -159,7 +136,7 @@ $(function () {
                     $input.parent().removeClass('_error');
                 }
 
-                // Получаем значение, заменяя null или undefined пустой строкой
+
                 const inputValue = $input.val() || '';
 
                 if ($input.is('select') && inputValue === '') {
@@ -177,7 +154,7 @@ $(function () {
                 } else if (inputName === 'email' && !emailTest(inputValue)) {
                     $input.addClass('_error');
                     isValid = false;
-                    // Используем inputValue.trim() вместо $input.val().trim()
+
                 } else if (inputValue.trim() === '') {
                     $input.addClass('_error');
                     isValid = false;
@@ -194,7 +171,7 @@ $(function () {
             const inputType = $input.attr('type');
             const inputName = $input.attr('name');
 
-            // Также обновляем здесь
+
             const inputValue = $input.val() || '';
 
             if ($input.is('select')) {
@@ -215,7 +192,7 @@ $(function () {
                     $input.removeClass('_error');
                 }
             } else {
-                // Используем inputValue.trim()
+
                 if (inputValue.trim() !== '') {
                     $input.removeClass('_error');
                 }
@@ -223,7 +200,7 @@ $(function () {
         });
     }
 
-    // Запуск для всех форм
+    // Form Validation
     $('form').each(function () {
         initFormValidation($(this));
     });
@@ -478,119 +455,6 @@ $(function () {
         phoneInput.addEventListener('input', onPhoneInput, false);
         phoneInput.addEventListener('paste', onPhonePaste, false);
     }
-
-
-    // Function for handling dynamic adaptation
-    // class DynamicAdapt {
-    //     constructor(type) {
-    //         this.type = type;
-    //         this.оbjects = [];
-    //         this.daClassname = "_dynamic_adapt_";
-    //         this.nodes = $('[data-da]');
-    //     }
-
-    //     init() {
-    //         // Populate the objects array
-    //         this.nodes.each((i, node) => {
-    //             const $node = $(node);
-    //             const data = $node.data('da').trim();
-    //             const dataArray = data.split(",");
-    //             const оbject = {};
-    //             оbject.element = $node;
-    //             оbject.parent = $node.parent();
-    //             оbject.destination = $(dataArray[0].trim());
-    //             оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
-    //             оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
-    //             оbject.index = this.indexInParent(оbject.parent, оbject.element);
-    //             this.оbjects.push(оbject);
-    //         });
-
-    //         this.arraySort(this.оbjects);
-
-    //         // Array of unique media queries
-    //         this.mediaQueries = this.оbjects.map(item => {
-    //             return `(${this.type}-width: ${item.breakpoint}px),${item.breakpoint}`;
-    //         }).filter((item, index, self) => {
-    //             return self.indexOf(item) === index;
-    //         });
-
-    //         // Attach listener to media query and call handler on first load
-    //         this.mediaQueries.forEach(media => {
-    //             const mediaSplit = media.split(',');
-    //             const matchMedia = window.matchMedia(mediaSplit[0]);
-    //             const mediaBreakpoint = mediaSplit[1];
-
-    //             // Array of objects with matching breakpoint
-    //             const objectsFilter = this.оbjects.filter(item => {
-    //                 return item.breakpoint === mediaBreakpoint;
-    //             });
-
-    //             matchMedia.addListener(() => {
-    //                 this.mediaHandler(matchMedia, objectsFilter);
-    //             });
-    //             this.mediaHandler(matchMedia, objectsFilter);
-    //         });
-    //     }
-
-    //     mediaHandler(matchMedia, оbjects) {
-    //         if (matchMedia.matches) {
-    //             оbjects.forEach(оbject => {
-    //                 оbject.index = this.indexInParent(оbject.parent, оbject.element);
-    //                 this.moveTo(оbject.place, оbject.element, оbject.destination);
-    //             });
-    //         } else {
-    //             оbjects.forEach(оbject => {
-    //                 if (оbject.element.hasClass(this.daClassname)) {
-    //                     this.moveBack(оbject.parent, оbject.element, оbject.index);
-    //                 }
-    //             });
-    //         }
-    //     }
-
-    //     // Move function
-    //     moveTo(place, element, destination) {
-    //         element.addClass(this.daClassname);
-    //         if (place === 'last' || place >= destination.children().length) {
-    //             destination.append(element);
-    //         } else if (place === 'first') {
-    //             destination.prepend(element);
-    //         } else {
-    //             destination.children().eq(place).before(element);
-    //         }
-    //     }
-
-    //     // Return function
-    //     moveBack(parent, element, index) {
-    //         element.removeClass(this.daClassname);
-    //         if (parent.children().eq(index).length) {
-    //             parent.children().eq(index).before(element);
-    //         } else {
-    //             parent.append(element);
-    //         }
-    //     }
-
-    //     // Get index within parent
-    //     indexInParent(parent, element) {
-    //         const parentChildren = parent.children();
-    //         return parentChildren.index(element);
-    //     }
-
-    //     // Sort array by breakpoint and place
-    //     arraySort(arr) {
-    //         if (this.type === "min") {
-    //             arr.sort((a, b) => a.breakpoint - b.breakpoint || a.place - b.place);
-    //         } else {
-    //             arr.sort((a, b) => b.breakpoint - a.breakpoint || b.place - a.place);
-    //         }
-    //     }
-    // }
-
-    // const da = new DynamicAdapt("max");
-    // da.init();
-
-
-    // Contacts Block Map
-
 
 
     // custom select

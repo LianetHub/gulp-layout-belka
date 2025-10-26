@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Manrope";
-  font-display: swap;
-  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -21,6 +13,14 @@
   font-display: swap;
   src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -41,14 +41,6 @@
 }
 
 @font-face {
-  font-family: "Manrope";
-  font-display: swap;
-  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
@@ -61,6 +53,14 @@
   font-display: swap;
   src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -1578,6 +1578,14 @@ body {
   color: #000;
 }
 
+body.lock-services {
+  overflow: hidden;
+}
+
+body.lock-menu {
+  overflow: hidden;
+}
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -1592,6 +1600,24 @@ body {
   margin: 0 auto;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url("../img/pattern.png");
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/pattern.png");
+}
+
+.wrapper::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(94, 167, 0, 0.9);
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
+  z-index: 3;
+  cursor: pointer;
 }
 
 .page {
@@ -2978,6 +3004,7 @@ body.is-loaded .preloader {
   font-weight: 700;
   line-height: 100%;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .header__services-list {
@@ -5404,6 +5431,48 @@ body.is-loaded .preloader {
     font-size: 1.125rem;
   }
 
+  body.lock-services .wrapper::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body.lock-services .header__wrapper {
+    position: relative;
+  }
+
+  body.lock-services .header__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    right: -1rem;
+    border-radius: 1rem;
+    height: 100%;
+    z-index: -1;
+    background: #fff;
+  }
+
+  body.lock-menu .wrapper::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body.lock-menu .header__wrapper {
+    position: relative;
+  }
+
+  body.lock-menu .header__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    right: -1rem;
+    border-radius: 1rem;
+    height: 100%;
+    z-index: -1;
+    background: #fff;
+  }
+
   [class*=__container] {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
@@ -5589,6 +5658,7 @@ body.is-loaded .preloader {
   }
 
   .header__wrapper {
+    z-index: 6;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -5815,6 +5885,10 @@ body.is-loaded .preloader {
     margin-top: 1.5rem;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clients__slider {
+    display: none;
   }
 
   .calc {
@@ -7845,14 +7919,6 @@ body.is-loaded .preloader {
 }
 
 @media (max-width: 575.98px) {
-  body.lock-services {
-    overflow: hidden;
-  }
-
-  body.lock-menu {
-    overflow: hidden;
-  }
-
   .popup__form .checkbox__btn {
     padding: 0;
   }

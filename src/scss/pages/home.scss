@@ -335,6 +335,9 @@
 	// .clients__slider
 	&__slider {
 		margin-top: rem(20);
+		@media (min-width: $md5) {
+			display: none;
+		}
 	}
 	// .clients__slide
 	&__slide {
