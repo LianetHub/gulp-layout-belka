@@ -222,6 +222,11 @@
 		&:active {
 			background: darken($color: $orangeLight, $amount: 10);
 		}
+		&.loading {
+			&::after {
+				border-color: $orange;
+			}
+		}
 	}
 
 	&.btn-green-light {
@@ -234,6 +239,12 @@
 		}
 		&:active {
 			background: darken($color: $greenLight, $amount: 10);
+		}
+
+		&.loading {
+			&::after {
+				border-color: $green;
+			}
 		}
 	}
 
@@ -341,6 +352,13 @@
 		cursor: default;
 		opacity: 0.7;
 		pointer-events: none;
+	}
+
+	&.loading {
+		color: transparent;
+		&::after {
+			border-color: #fff;
+		}
 	}
 }
 

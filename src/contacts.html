@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'UIKIT'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <div class="heading">
+                    <div class="heading__container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/" title="На главную">Главная</a></li>
+                                <li class="breadcrumbs__item"><span class="breadcrumbs__link active">Контакты</span></li>
+                            </ul>
+                        </nav>
+                        <h1 class="heading__title title-xl"><span class="color-accent">Контактная</span> информация</h1>
+                    </div>
+                </div>
+                <section class="contacts">
+                    <div class="contacts__container">
+                        <h2 class="title">«Наша белка» - клининговая компания</h2>
+                        <ul class="contacts__info">
+                            <li class="contacts__info-item icon-location">
+                                <strong>Адрес:</strong>
+                                <address>Московская область, г. Балашиха, микрорайон Железнодорожный, ул. Советская, 83в </address>
+                            </li>
+                            <li class="contacts__info-item icon-phone">
+                                <strong>Единый многоканальный телефон:</strong>
+                                <a href="tel:+74959888495" class="phone-link">+7 (495) <span>9-888-495</span></a>
+                            </li>
+                            <li class="contacts__info-item icon-phone">
+                                <strong>Дополнительная мобильная линия:</strong>
+                                <a href="tel:+79778323767" class="phone-link">+7 (977) <span>832-37-67</span></a>
+                            </li>
+                            <li class="contacts__info-item icon-clock">
+                                <strong>Режим работы:</strong>
+                                с 9:00 до 22:00
+                            </li>
+                            <li class="contacts__info-item icon-envelope">
+                                <strong>Электронный адрес:</strong>
+                                <a href="mailto:info@nashabelka.ru">info@nashabelka.ru</a>
+                            </li>
+                        </ul>
+                        <div class="contacts__map">
+                            <iframe width="100%" height="400" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac3ee05af4501a5523f3c5e87204422dc89d3e8e043ecd43a32f4ec4f524ea58c&amp;amp;source=constructor" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac3ee05af4501a5523f3c5e87204422dc89d3e8e043ecd43a32f4ec4f524ea58c&amp;amp;source=constructor"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

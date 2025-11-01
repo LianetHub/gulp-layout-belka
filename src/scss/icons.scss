@@ -18,6 +18,18 @@
 	}
 }
 
+.icon-clock:before {
+	content: "\e91a";
+}
+.icon-envelope:before {
+	content: "\e91b";
+}
+.icon-location:before {
+	content: "\e91c";
+}
+.icon-phone:before {
+	content: "\e91d";
+}
 .icon-filter:before {
 	content: "\e918";
 }

@@ -4,30 +4,68 @@
         <div class="products__categories nav-slider swiper">
             <div class="swiper-wrapper">
                 <div class="nav-slider__item swiper-slide">
-                    <a href="" class="products__category label active">Все товары</a>
+                    <button class="products__category label active">Все товары</button>
                 </div>
                 <div class="nav-slider__item swiper-slide">
-                    <a href="" class="products__category label">Для стёкол</a>
+                    <button class="products__category label">Для стёкол</button>
                 </div>
                 <div class="nav-slider__item swiper-slide">
-                    <a href="" class="products__category label">Для полов</a>
+                    <button class="products__category label">Для полов</button>
                 </div>
                 <div class="nav-slider__item swiper-slide">
-                    <a href="" class="products__category label">Для сантехники</a>
+                    <button class="products__category label">Для сантехники</button>
                 </div>
                 <div class="nav-slider__item swiper-slide">
-                    <a href="" class="products__category label">Для кухни</a>
+                    <button class="products__category label">Для кухни</button>
                 </div>
             </div>
         </div>
         <div class="products__content">
-            <div class="products__slider swiper">
-                <div class="swiper-wrapper">
-                    @@loop('./templates/_product.html', './html/json/_productsSlider.json')
+            <div class="products__content-block active">
+                <div class="products__slider swiper">
+                    <div class="swiper-wrapper">
+                        @@loop('./templates/_product.html', './html/json/_productsSlider.json')
+                    </div>
                 </div>
+                <button type="button" class="products__prev swiper-button-prev"></button>
+                <button type="button" class="products__next swiper-button-next"></button>
             </div>
-            <button type="button" class="products__prev swiper-button-prev"></button>
-            <button type="button" class="products__next swiper-button-next"></button>
+            <div class="products__content-block">
+                <div class="products__slider swiper">
+                    <div class="swiper-wrapper">
+                        @@loop('./templates/_product.html', './html/json/_productsSlider.json')
+                    </div>
+                </div>
+                <button type="button" class="products__prev swiper-button-prev"></button>
+                <button type="button" class="products__next swiper-button-next"></button>
+            </div>
+            <div class="products__content-block">
+                <div class="products__slider swiper">
+                    <div class="swiper-wrapper">
+                        @@loop('./templates/_product.html', './html/json/_productsSlider.json')
+                    </div>
+                </div>
+                <button type="button" class="products__prev swiper-button-prev"></button>
+                <button type="button" class="products__next swiper-button-next"></button>
+            </div>
+            <div class="products__content-block">
+                <div class="products__slider swiper">
+                    <div class="swiper-wrapper">
+                        @@loop('./templates/_product.html', './html/json/_productsSlider.json')
+                    </div>
+                </div>
+                <button type="button" class="products__prev swiper-button-prev"></button>
+                <button type="button" class="products__next swiper-button-next"></button>
+            </div>
+            <div class="products__content-block">
+                <div class="products__slider swiper">
+                    <div class="swiper-wrapper">
+                        @@loop('./templates/_product.html', './html/json/_productsSlider.json')
+                    </div>
+                </div>
+                <button type="button" class="products__prev swiper-button-prev"></button>
+                <button type="button" class="products__next swiper-button-next"></button>
+            </div>
         </div>
         <a href="/catalog.html" class="products__more more-btn btn btn-white btn-md icon-next">Все товары</a>
     </div>
